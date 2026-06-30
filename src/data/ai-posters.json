@@ -1,7 +1,20 @@
 {
-  "version": 3,
+  "version": 4,
+  "activeVariant": "v2",
+  "variants": {
+    "v1": "v1",
+    "v2": "v2"
+  },
   "composited": true,
-  "updatedAt": "2026-06-30T19:07:37.376Z",
+  "layoutDistribution": {
+    "watermark": 12,
+    "edgeBleed": 14,
+    "diagonalSweep": 12,
+    "verticalRail": 16,
+    "cinematic": 20,
+    "logoLockup": 15
+  },
+  "updatedAt": "2026-06-30T19:10:05.614Z",
   "jpgIds": [
     "starlight-station",
     "moonlit-harbor",

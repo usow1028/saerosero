@@ -1,15 +1,15 @@
 /**
- * Composites designed title typography onto AI poster art.
- * Usage: node scripts/composite-posters.mjs [--force]
+ * v1 classic composite — uniform frame/tag layout. Output: posters/v1/
+ * Usage: node scripts/composite-posters.mjs
  */
-import { readFileSync, mkdirSync, existsSync, writeFileSync, copyFileSync } from 'node:fs';
+import { readFileSync, mkdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { chromium } from 'playwright';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const outDir = path.join(ROOT, 'public/assets/posters');
-const rawDir = path.join(outDir, 'raw');
+const outDir = path.join(ROOT, 'public/assets/posters/v1');
+const rawDir = path.join(ROOT, 'public/assets/posters/raw');
 const catalog = JSON.parse(readFileSync(path.join(ROOT, 'public/data/catalog.json'), 'utf8'));
 
 const GENRE = {
@@ -84,15 +84,7 @@ body{width:680px;height:1020px;overflow:hidden;background:#060a14}
 mkdirSync(outDir, { recursive: true });
 mkdirSync(rawDir, { recursive: true });
 
-for (const title of catalog.titles) {
-  const finalPath = path.join(outDir, `${title.id}.jpg`);
-  const rawPath = path.join(rawDir, `${title.id}.jpg`);
-  if (existsSync(finalPath) && !existsSync(rawPath)) {
-    copyFileSync(finalPath, rawPath);
-  }
-}
-
-const jpgIds = catalog.titles.map((t) => t.id).filter((id) => existsSync(path.join(rawDir, `${id}.jpg`)) || existsSync(path.join(outDir, `${id}.jpg`)));
+const jpgIds = catalog.titles.map((t) => t.id).filter((id) => existsSync(path.join(rawDir, `${id}.jpg`)));
 if (!jpgIds.length) {
   console.error('No poster JPGs found. Run seed:posters:jpg first.');
   process.exit(1);
@@ -117,8 +109,4 @@ for (const title of catalog.titles) {
 
 await browser.close();
 
-writeFileSync(
-  path.join(ROOT, 'src/data/ai-posters.json'),
-  JSON.stringify({ version: 3, composited: true, updatedAt: new Date().toISOString(), jpgIds: catalog.titles.map((t) => t.id).filter((id) => existsSync(path.join(outDir, `${id}.jpg`))) }, null, 2),
-);
-console.log(`Composited title design onto ${count} posters.`);
+console.log(`v1 classic composites: ${count} → posters/v1/`);

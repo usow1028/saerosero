@@ -4,6 +4,7 @@ import { getLocale, t } from '../i18n/index.js';
 import { el } from './helpers.js';
 
 const jpgIds = new Set(aiPosters.jpgIds ?? []);
+const activeVariant = aiPosters.activeVariant ?? 'v2';
 
 const GENRE_CLASS = {
   sf: 'poster-title--sf',
@@ -15,9 +16,13 @@ const GENRE_CLASS = {
   action: 'poster-title--action',
 };
 
-export function posterUrl(titleId, { preferJpg = true } = {}) {
+export function posterVariant() {
+  return activeVariant;
+}
+
+export function posterUrl(titleId, { preferJpg = true, variant = activeVariant } = {}) {
   if (preferJpg && jpgIds?.has(titleId)) {
-    return `/assets/posters/${titleId}.jpg`;
+    return `/assets/posters/${variant}/${titleId}.jpg`;
   }
   return `/assets/posters/${titleId}.svg`;
 }
@@ -35,7 +40,6 @@ function secondaryTitle(title, locale) {
   return en !== primary ? en : ko;
 }
 
-/** Designed title block for SVG fallback (JPG already has baked titles after composite) */
 function createPosterTitleOverlay(title, { show = true } = {}) {
   if (!show) return null;
   const locale = getLocale();
@@ -71,7 +75,12 @@ export function createPosterMedia(title, { animate = true, titleOverlay = null }
 
   img.src = posterUrl(title.id);
   img.addEventListener('error', () => {
-    if (img.src.endsWith('.jpg')) {
+    if (img.src.includes('.jpg')) {
+      const fallbackVariant = img.src.includes('/v2/') ? 'v1' : null;
+      if (fallbackVariant && jpgIds.has(title.id)) {
+        img.src = posterUrl(title.id, { variant: fallbackVariant });
+        return;
+      }
       img.src = posterUrl(title.id, { preferJpg: false });
       const fallbackTitle = createPosterTitleOverlay(title, { show: true });
       if (fallbackTitle) frame.append(fallbackTitle);
