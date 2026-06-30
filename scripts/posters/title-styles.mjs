@@ -1,6 +1,5 @@
 /**
- * Poster title art — mood-matched treatments rendered via typography engine.
- * Pipeline: HTML/CSS (Chromium) → transparent PNG (Playwright omitBackground).
+ * Poster title art — mood-matched, per-glyph typography treatments.
  */
 
 import {
@@ -10,19 +9,26 @@ import {
   featuresDisplay,
   featuresSerif,
   fontDisplay,
-  fontSans,
   fontSerif,
-  graphemes,
   isCjk,
   localeMeta,
+  perCharLineHtml,
+  perCharVerticalHtml,
   splitLines,
   titleSize,
   typeBase,
   uppercaseSafe,
-  verticalTextHtml,
 } from './typography.mjs';
 
+export function hash(id) {
+  let n = 0;
+  for (const c of id) n = (n * 31 + c.charCodeAt(0)) % 9973;
+  return n;
+}
+
 export const TITLE_STYLES = [
+  'glyph-mosaic',
+  'kinetic-glyphs',
   'cinematic-glow',
   'neon-sign',
   'conic-shine',
@@ -54,31 +60,25 @@ const GENRE_FALLBACK = {
 };
 
 const MOOD_RULES = [
-  { keys: ['neon', 'cyber', 'night city', 'rain', 'noir', 'alley', 'detective'], styles: ['neon-sign', 'noir-cut', 'glitch-rgb', 'skew-shadow'] },
-  { keys: ['space', 'orbital', 'station', 'quantum', 'sci-fi', 'future', 'android'], styles: ['cinematic-glow', 'conic-shine', 'layered-depth', 'prismatic-serif'] },
-  { keys: ['harbor', 'moon', 'love', 'romantic', 'wedding', 'heart', 'letter', 'tide'], styles: ['romance-script', 'ethereal-mist', 'vertical-elegant', 'shimmer-gradient'] },
-  { keys: ['battle', 'sword', 'war', 'fight', 'explosion', 'chase', 'action'], styles: ['brutal-impact', 'impact-stack', 'chrome-block', 'anime-bold'] },
-  { keys: ['horror', 'ghost', 'curse', 'blood', 'thriller', 'shadow', 'murder'], styles: ['glitch-rgb', 'noir-cut', 'skew-shadow', 'layered-depth'] },
-  { keys: ['magic', 'fantasy', 'dragon', 'castle', 'fairy', 'enchant'], styles: ['conic-shine', 'ethereal-mist', 'vertical-elegant', 'prismatic-serif'] },
-  { keys: ['school', 'anime', 'slice', 'youth', 'club'], styles: ['anime-bold', 'impact-stack', 'cinematic-glow'] },
-  { keys: ['mystery', 'secret', 'puzzle', 'clue', 'case'], styles: ['noir-cut', 'layered-depth', 'glitch-rgb', 'skew-shadow'] },
+  { keys: ['neon', 'cyber', 'night city', 'rain', 'noir', 'alley', 'detective'], styles: ['neon-sign', 'glyph-mosaic', 'noir-cut', 'glitch-rgb'] },
+  { keys: ['space', 'orbital', 'station', 'quantum', 'sci-fi', 'future', 'android'], styles: ['kinetic-glyphs', 'cinematic-glow', 'conic-shine', 'prismatic-serif'] },
+  { keys: ['harbor', 'moon', 'love', 'romantic', 'wedding', 'heart', 'letter', 'tide'], styles: ['glyph-mosaic', 'romance-script', 'vertical-elegant', 'ethereal-mist'] },
+  { keys: ['battle', 'sword', 'war', 'fight', 'explosion', 'chase', 'action'], styles: ['kinetic-glyphs', 'brutal-impact', 'impact-stack', 'anime-bold'] },
+  { keys: ['horror', 'ghost', 'curse', 'blood', 'thriller', 'shadow', 'murder'], styles: ['glitch-rgb', 'glyph-mosaic', 'noir-cut', 'skew-shadow'] },
+  { keys: ['magic', 'fantasy', 'dragon', 'castle', 'fairy', 'enchant'], styles: ['glyph-mosaic', 'conic-shine', 'vertical-elegant', 'prismatic-serif'] },
+  { keys: ['school', 'anime', 'slice', 'youth', 'club'], styles: ['kinetic-glyphs', 'anime-bold', 'impact-stack', 'cinematic-glow'] },
+  { keys: ['mystery', 'secret', 'puzzle', 'clue', 'case'], styles: ['glyph-mosaic', 'noir-cut', 'layered-depth', 'skew-shadow'] },
 ];
 
 const GENRE_STYLES = {
-  sf: ['cinematic-glow', 'conic-shine', 'layered-depth', 'prismatic-serif', 'neon-sign'],
-  fantasy: ['conic-shine', 'ethereal-mist', 'vertical-elegant', 'prismatic-serif', 'shimmer-gradient'],
-  romance: ['romance-script', 'ethereal-mist', 'vertical-elegant', 'shimmer-gradient', 'cinematic-glow'],
-  thriller: ['noir-cut', 'glitch-rgb', 'skew-shadow', 'layered-depth', 'brutal-impact'],
-  drama: ['cinematic-glow', 'romance-script', 'impact-stack', 'chrome-block', 'layered-depth'],
-  mystery: ['noir-cut', 'glitch-rgb', 'layered-depth', 'skew-shadow', 'vertical-elegant'],
-  action: ['brutal-impact', 'impact-stack', 'chrome-block', 'anime-bold', 'skew-shadow'],
+  sf: ['kinetic-glyphs', 'glyph-mosaic', 'cinematic-glow', 'conic-shine', 'prismatic-serif'],
+  fantasy: ['glyph-mosaic', 'conic-shine', 'vertical-elegant', 'prismatic-serif', 'ethereal-mist'],
+  romance: ['glyph-mosaic', 'romance-script', 'vertical-elegant', 'ethereal-mist', 'shimmer-gradient'],
+  thriller: ['kinetic-glyphs', 'glyph-mosaic', 'noir-cut', 'glitch-rgb', 'skew-shadow'],
+  drama: ['glyph-mosaic', 'cinematic-glow', 'romance-script', 'impact-stack', 'layered-depth'],
+  mystery: ['glyph-mosaic', 'noir-cut', 'layered-depth', 'skew-shadow', 'glitch-rgb'],
+  action: ['kinetic-glyphs', 'brutal-impact', 'impact-stack', 'anime-bold', 'chrome-block'],
 };
-
-export function hash(id) {
-  let n = 0;
-  for (const c of id) n = (n * 31 + c.charCodeAt(0)) % 9973;
-  return n;
-}
 
 function titleText(title, locale) {
   return title.titles?.[locale] ?? title.titles?.en ?? title.titles?.ko ?? title.id;
@@ -127,13 +127,16 @@ export function styleForTitle(title) {
   return candidates[hash(id) % candidates.length];
 }
 
-/** Resolve style per locale — vertical-elegant only when script supports it well */
 function resolveStyle(styleKey, locale) {
-  if (styleKey === 'vertical-elegant' && !isCjk(locale) && graphemes(locale).length) {
-    const latinAlt = ['romance-script', 'ethereal-mist', 'shimmer-gradient', 'cinematic-glow'];
+  if (styleKey === 'vertical-elegant' && !isCjk(locale)) {
+    const latinAlt = ['glyph-mosaic', 'romance-script', 'ethereal-mist', 'shimmer-gradient'];
     return latinAlt[hash(locale) % latinAlt.length];
   }
   return styleKey;
+}
+
+function ctx(title) {
+  return { seed: hash(title.id ?? 'x'), genre: title.genre ?? 'drama' };
 }
 
 function taglineHtml(text, g, locale, opts = {}) {
@@ -150,64 +153,76 @@ function taglineHtml(text, g, locale, opts = {}) {
 }
 
 const RENDERERS = {
-  'cinematic-glow'(name, g, locale, tagline) {
+  'glyph-mosaic'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
+    const size = titleSize(name, 88, 72);
     const lines = splitLines(name, 8);
-    const size = titleSize(name, 94, 78);
-    const ff = fontSans(locale);
-    const feat = isCjk(locale) ? featuresCjk() : featuresDisplay();
+    const body = lines.map((line, li) => perCharLineHtml(line, {
+      seed: seed + li * 13, baseSize: size - li * 6, palette: g, locale, genre, mode: 'mosaic',
+    })).join('<div style="height:0.15em"></div>');
     return `
-<div style="position:absolute;left:4%;right:4%;bottom:7%">
-  ${lines.map((line, i) => `<div style="font-family:${ff};font-size:${size - i * 8}px;font-weight:900;line-height:0.92;color:#fff;
-    ${typeBase(feat)}text-wrap:balance;
-    text-shadow:0 0 48px ${g.a},0 3px 0 ${g.b},0 6px 0 rgba(0,0,0,0.55),0 12px 40px rgba(0,0,0,0.9),
-    0 0 100px ${g.glow};-webkit-text-stroke:1.5px color-mix(in oklch, white 25%, transparent);
-    paint-order:stroke fill">${esc(line)}</div>`).join('')}
+<div style="position:absolute;left:4%;right:4%;bottom:7%;text-align:center">${body}
   ${taglineHtml(tagline, g, locale)}
 </div>`;
   },
 
-  'neon-sign'(name, g, locale, tagline) {
-    const ff = fontSans(locale);
-    const size = titleSize(name, 90, 74);
+  'kinetic-glyphs'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
+    const size = titleSize(name, 92, 76);
     return `
-<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:94%">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:900;color:${g.a};${typeBase(featuresDisplay())}
-    text-shadow:0 0 8px #fff,0 0 16px ${g.a},0 0 36px ${g.a},0 0 72px ${g.b},0 0 120px ${g.b},
-    0 0 160px ${g.glow};filter:drop-shadow(0 4px 20px rgba(0,0,0,0.8))">${esc(name)}</div>
+<div style="position:absolute;left:3%;right:3%;bottom:8%;text-align:center">
+  ${perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'stroke' })}
   ${taglineHtml(tagline, g, locale, { italic: false })}
 </div>`;
   },
 
-  'conic-shine'(name, g, locale, tagline) {
-    const ff = fontSerif(locale);
-    const size = titleSize(name, 86, 70);
+  'cinematic-glow'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
+    const lines = splitLines(name, 8);
+    const size = titleSize(name, 94, 78);
+    const body = lines.map((line, li) => perCharLineHtml(line, {
+      seed: seed + li, baseSize: size - li * 8, palette: g, locale, genre, mode: 'glow',
+    })).join('<div style="height:0.12em"></div>');
     return `
-<div style="position:absolute;left:5%;right:5%;bottom:9%;text-align:center">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:700;${typeBase(featuresSerif())}
-    background:conic-gradient(from 210deg at 50% 40%, ${g.c}, ${g.a}, ${g.mix}, ${g.b}, ${g.c});
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-    filter:drop-shadow(0 3px 6px rgba(0,0,0,0.95)) drop-shadow(0 0 32px ${g.glow})">${esc(name)}</div>
+<div style="position:absolute;left:4%;right:4%;bottom:7%">${body}
   ${taglineHtml(tagline, g, locale)}
 </div>`;
   },
 
-  'chrome-block'(name, g, locale) {
-    const ff = fontDisplay(locale);
+  'neon-sign'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
+    const size = titleSize(name, 90, 74);
+    return `
+<div style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;width:94%">
+  ${perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'neon' })}
+  ${taglineHtml(tagline, g, locale, { italic: false })}
+</div>`;
+  },
+
+  'conic-shine'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
+    const size = titleSize(name, 86, 70);
+    return `
+<div style="position:absolute;left:5%;right:5%;bottom:9%;text-align:center">
+  ${perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'mosaic' })}
+  ${taglineHtml(tagline, g, locale)}
+</div>`;
+  },
+
+  'chrome-block'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const size = titleSize(name, 98, 82);
     const label = uppercaseSafe(name, locale);
     return `
 <div style="position:absolute;left:-3%;right:-3%;bottom:6%;text-align:center;transform:rotate(-2deg)">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:400;letter-spacing:${isCjk(locale) ? '0.02em' : '0.05em'};
-    ${typeBase(featuresDisplay())}color:#f0f0f0;
-    text-shadow:0 1px 0 #fff,0 4px 0 #bbb,0 7px 0 #777,0 10px 0 #444,0 14px 28px rgba(0,0,0,0.85),
-    0 0 50px ${g.glow}">${esc(label)}</div>
+  ${perCharLineHtml(label, { seed, baseSize: size, palette: g, locale, genre, mode: 'stroke' })}
 </div>`;
   },
 
-  'vertical-elegant'(name, g, locale, tagline) {
-    const base = titleSize(name, 62, 52);
-    const glow = `;text-shadow:0 0 28px ${g.a},3px 0 16px rgba(0,0,0,0.85)`;
-    const body = verticalTextHtml(name, locale, { baseSize: base, color: '#fff', glow });
+  'vertical-elegant'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
+    const base = titleSize(name, 64, 54);
+    const body = perCharVerticalHtml(name, locale, { seed, baseSize: base, palette: g, genre, mode: 'mosaic' });
     return `
 <div style="position:absolute;left:6%;top:10%;bottom:12%;display:flex;align-items:center">
   <div style="border-right:4px solid ${g.a};padding-right:18px">${body}</div>
@@ -215,153 +230,136 @@ const RENDERERS = {
 ${taglineHtml(tagline, g, locale, { top: true })}`;
   },
 
-  'impact-stack'(name, g, locale) {
+  'impact-stack'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const lines = splitLines(name, 7);
-    const ff = fontSans(locale);
     const size = titleSize(name, 98, 84);
-    const feat = isCjk(locale) ? featuresCjk() : featuresDisplay();
     return `
 <div style="position:absolute;left:3%;bottom:6%;transform:rotate(-3.5deg);transform-origin:left bottom">
-  ${lines.map((line, i) => `<div style="font-family:${ff};font-size:${size - i * 18}px;font-weight:900;line-height:0.88;
-    color:${i === 0 ? '#fff' : g.a};${typeBase(feat)}
-    -webkit-text-stroke:3px ${g.stroke};paint-order:stroke fill;
-    text-shadow:6px 6px 0 ${g.b},0 0 40px ${g.glow}">${esc(line)}</div>`).join('')}
+  ${lines.map((line, i) => `<div style="margin-bottom:0.05em">
+    ${perCharLineHtml(line, { seed: seed + i * 7, baseSize: size - i * 18, palette: g, locale, genre, mode: 'stroke', align: 'left' })}
+  </div>`).join('')}
 </div>`;
   },
 
-  'glitch-rgb'(name, g, locale, tagline) {
-    const ff = fontSans(locale);
+  'glitch-rgb'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const size = titleSize(name, 82, 68);
+    const pool = perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'subtle' });
     return `
 <div style="position:absolute;left:4%;bottom:9%">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:800;color:#fff;position:relative;${typeBase(featuresDisplay())}">
-    <span style="position:absolute;inset:0;color:#0ff;opacity:0.9;transform:translate(-4px,-2px)" aria-hidden="true">${esc(name)}</span>
-    <span style="position:absolute;inset:0;color:#f0f;opacity:0.9;transform:translate(4px,2px)" aria-hidden="true">${esc(name)}</span>
-    <span style="position:relative;text-shadow:0 0 20px ${g.glow}">${esc(name)}</span>
+  <div style="position:relative;mix-blend-mode:screen">
+    <div style="position:absolute;inset:0;color:#0ff;opacity:0.85;transform:translate(-5px,-2px)" aria-hidden="true">${pool}</div>
+    <div style="position:absolute;inset:0;color:#f0f;opacity:0.85;transform:translate(5px,2px)" aria-hidden="true">${pool}</div>
+    <div style="position:relative">${perCharLineHtml(name, { seed: seed + 3, baseSize: size, palette: g, locale, genre, mode: 'glow' })}</div>
   </div>
   ${taglineHtml(tagline, g, locale, { italic: false })}
 </div>`;
   },
 
-  'romance-script'(name, g, locale, tagline) {
-    const ff = fontSerif(locale);
+  'romance-script'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const size = titleSize(name, 78, 64);
     return `
 <div style="position:absolute;left:6%;right:6%;top:46%;text-align:center">
-  <div style="font-family:${ff};font-style:italic;font-size:${size}px;font-weight:500;color:#fff;
-    ${typeBase(featuresSerif())}text-wrap:balance;
-    text-shadow:0 3px 32px ${g.b},0 0 50px ${g.glow}">${esc(name)}</div>
+  ${perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'romance' })}
   <div style="width:80px;height:2px;background:linear-gradient(90deg,transparent,${g.a},transparent);margin:14px auto"></div>
   ${taglineHtml(tagline, g, locale)}
 </div>`;
   },
 
-  'noir-cut'(name, g, locale, tagline) {
-    const ff = fontSans(locale);
+  'noir-cut'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const size = titleSize(name, 74, 62);
     const label = uppercaseSafe(name, locale);
     return `
 <div style="position:absolute;left:5%;bottom:8%">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:800;color:#f8f8f8;
-    letter-spacing:${isCjk(locale) ? '0.04em' : '0.08em'};${isCjk(locale) ? '' : 'text-transform:uppercase;'}
-    ${typeBase(featuresDisplay())}
-    box-decoration-break:clone;-webkit-box-decoration-break:clone;
-    background:${g.b};padding:10px 18px;box-shadow:8px 8px 0 ${g.a},0 0 40px ${g.glow}">${esc(label)}</div>
+  <div style="background:${g.b};padding:10px 18px;box-shadow:8px 8px 0 ${g.a},0 0 40px ${g.glow};display:inline-block">
+    ${perCharLineHtml(label, { seed, baseSize: size, palette: { ...g, a: '#f8f8f8', c: '#f8f8f8' }, locale, genre, mode: 'subtle' })}
+  </div>
   ${taglineHtml(tagline, g, locale, { italic: false })}
 </div>`;
   },
 
-  'anime-bold'(name, g, locale) {
+  'anime-bold'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const lines = splitLines(name, 6);
-    const ff = fontSans(locale);
     const size = titleSize(name, 90, 76);
-    const feat = isCjk(locale) ? featuresCjk() : featuresDisplay();
     return `
 <div style="position:absolute;left:3%;right:3%;bottom:6%;text-align:center">
-  ${lines.map((line) => `<div style="font-family:${ff};font-size:${size}px;font-weight:900;line-height:1.02;color:#fff;
-    ${typeBase(feat)}-webkit-text-stroke:4px ${g.b};paint-order:stroke fill;
-    text-shadow:0 0 32px ${g.a},0 5px 0 ${g.b},0 8px 20px rgba(0,0,0,0.75)">${esc(line)}</div>`).join('')}
+  ${lines.map((line, li) => perCharLineHtml(line, {
+    seed: seed + li, baseSize: size, palette: g, locale, genre, mode: 'stroke',
+  })).join('<div style="height:0.1em"></div>')}
 </div>`;
   },
 
-  'layered-depth'(name, g, locale, tagline) {
-    const ff = fontSans(locale);
+  'layered-depth'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const size = titleSize(name, 88, 72);
-    const layers = [14, 10, 5, 0];
-    const spans = layers.map((off, i) =>
-      `<span style="position:absolute;inset:0;transform:translate(${off}px,${off}px);color:${g.b};opacity:${0.3 + i * 0.18}" aria-hidden="true">${esc(name)}</span>`,
+    const line = perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'glow' });
+    const offsets = [14, 10, 5];
+    const layers = offsets.map((off, i) =>
+      `<div style="position:absolute;inset:0;transform:translate(${off}px,${off}px);opacity:${0.35 + i * 0.2};color:${g.b}" aria-hidden="true">${line}</div>`,
     ).join('');
     return `
 <div style="position:absolute;left:5%;bottom:10%">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:900;color:#fff;position:relative;${typeBase(featuresDisplay())}">
-    ${spans}
-    <span style="position:relative;text-shadow:0 0 36px ${g.glow}">${esc(name)}</span>
-  </div>
+  <div style="position:relative">${layers}<div style="position:relative">${line}</div></div>
   ${taglineHtml(tagline, g, locale)}
 </div>`;
   },
 
-  'shimmer-gradient'(name, g, locale, tagline) {
-    const ff = fontSerif(locale);
+  'shimmer-gradient'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const size = titleSize(name, 84, 70);
     return `
 <div style="position:absolute;left:5%;right:5%;bottom:9%;text-align:center">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:700;${typeBase(featuresSerif())}
-    background:linear-gradient(105deg, ${g.c} 0%, ${g.a} 22%, #fff 42%, ${g.mix} 52%, ${g.b} 78%, ${g.c} 100%);
-    background-size:220% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-    filter:drop-shadow(0 4px 8px rgba(0,0,0,0.9)) drop-shadow(0 0 28px ${g.glow})">${esc(name)}</div>
+  ${perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'mosaic' })}
   ${taglineHtml(tagline, g, locale)}
 </div>`;
   },
 
-  'skew-shadow'(name, g, locale, tagline) {
-    const ff = fontSans(locale);
+  'skew-shadow'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const size = titleSize(name, 86, 72);
+    const line = perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'glow' });
     return `
 <div style="position:absolute;left:4%;bottom:9%;transform:skewX(-6deg)">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:900;color:#fff;position:relative;${typeBase(featuresDisplay())}">
-    <span style="position:absolute;inset:0;color:${g.b};transform:translate(10px,10px) skewX(6deg)" aria-hidden="true">${esc(name)}</span>
-    <span style="position:relative;text-shadow:0 0 24px ${g.glow};-webkit-text-stroke:1px ${g.a}">${esc(name)}</span>
+  <div style="position:relative">
+    <div style="position:absolute;inset:0;transform:translate(10px,10px) skewX(6deg);opacity:0.7" aria-hidden="true">${line}</div>
+    <div style="position:relative">${line}</div>
   </div>
   ${taglineHtml(tagline, g, locale, { italic: false })}
 </div>`;
   },
 
-  'ethereal-mist'(name, g, locale, tagline) {
-    const ff = fontSerif(locale);
+  'ethereal-mist'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const size = titleSize(name, 80, 66);
     return `
 <div style="position:absolute;left:6%;right:6%;top:44%;text-align:center">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:600;font-style:italic;color:${g.c};
-    ${typeBase(featuresSerif())}text-wrap:balance;
-    text-shadow:0 0 60px ${g.glow},0 0 100px ${g.a},0 4px 30px rgba(0,0,0,0.6)">${esc(name)}</div>
+  ${perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'romance' })}
   ${taglineHtml(tagline, g, locale)}
 </div>`;
   },
 
-  'brutal-impact'(name, g, locale) {
+  'brutal-impact'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const lines = splitLines(name, 6);
-    const ff = fontDisplay(locale);
     const size = titleSize(name, 102, 88);
     return `
 <div style="position:absolute;left:2%;right:2%;bottom:5%;text-align:center">
-  ${lines.map((line, i) => `<div style="font-family:${ff};font-size:${size - i * 12}px;font-weight:400;line-height:0.9;
-    color:${i === 0 ? '#fff' : g.a};letter-spacing:${isCjk(locale) ? '0.02em' : '0.06em'};
-    ${typeBase(featuresDisplay())}-webkit-text-stroke:2px ${g.stroke};paint-order:stroke fill;
-    text-shadow:0 8px 0 ${g.b},0 12px 24px rgba(0,0,0,0.9),0 0 50px ${g.glow}">${esc(uppercaseSafe(line, locale))}</div>`).join('')}
+  ${lines.map((line, i) => perCharLineHtml(uppercaseSafe(line, locale), {
+    seed: seed + i * 11, baseSize: size - i * 12, palette: g, locale, genre, mode: 'stroke',
+  })).join('<div style="height:0.08em"></div>')}
 </div>`;
   },
 
-  'prismatic-serif'(name, g, locale, tagline) {
-    const ff = fontSerif(locale);
+  'prismatic-serif'(name, g, locale, tagline, title) {
+    const { seed, genre } = ctx(title);
     const size = titleSize(name, 88, 74);
     return `
 <div style="position:absolute;left:5%;right:5%;bottom:9%;text-align:center">
-  <div style="font-family:${ff};font-size:${size}px;font-weight:700;${typeBase(featuresSerif())}
-    background:linear-gradient(135deg, ${g.c} 0%, ${g.a} 30%, ${g.mix} 50%, ${g.b} 80%);
-    -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
-    filter:drop-shadow(0 2px 2px rgba(0,0,0,1)) drop-shadow(0 0 40px ${g.glow});
-    -webkit-text-stroke:0.5px color-mix(in oklch, ${g.a} 40%, transparent);paint-order:stroke fill">${esc(name)}</div>
+  ${perCharLineHtml(name, { seed, baseSize: size, palette: g, locale, genre, mode: 'mosaic' })}
   ${taglineHtml(tagline, g, locale)}
 </div>`;
   },
@@ -374,8 +372,8 @@ export function titleArtHtml(title, locale, styleKey) {
   const name = titleText(title, locale);
   const tagline = loglineText(title, locale);
   const resolved = resolveStyle(styleKey, locale);
-  const render = RENDERERS[resolved] ?? RENDERERS['cinematic-glow'];
-  const body = render(name, g, locale, tagline);
+  const render = RENDERERS[resolved] ?? RENDERERS['glyph-mosaic'];
+  const body = render(name, g, locale, tagline, title);
   const { lang } = localeMeta(locale);
 
   return canvasShell(lang, body);
