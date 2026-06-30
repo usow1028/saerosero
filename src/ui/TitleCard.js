@@ -13,8 +13,10 @@ export function createTitleCard(title, { onClick, compact = false, showGenre = f
     poster.append(el('span', { class: 'chip poster-badge', text: t(`genre.${title.genre}`) }));
   }
 
-  if (title.status !== 'playable') {
+  if (title.status === 'coming_soon') {
     poster.append(el('div', { class: 'poster-lock', text: t(`status.${title.status}`) }));
+  } else if (title.status === 'development') {
+    poster.append(el('div', { class: 'poster-lock poster-lock--dev', text: t(`status.${title.status}`) }));
   }
 
   card.append(poster);

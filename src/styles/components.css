@@ -90,6 +90,10 @@
 
 .chip {
   display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  flex: 0 0 auto;
+  align-self: flex-start;
   padding: 0.22rem 0.6rem;
   border-radius: 999px;
   font-size: 0.7rem;
@@ -99,8 +103,13 @@
   background: rgba(126, 200, 232, 0.14);
   color: var(--sky-300);
   border: 1px solid var(--border);
+  box-sizing: border-box;
 }
-.chip-hero { background: rgba(240, 184, 108, 0.18); color: var(--gold); border-color: rgba(240, 184, 108, 0.35); }
+.chip-hero {
+  background: rgba(240, 184, 108, 0.22);
+  color: var(--gold);
+  border: 1px solid rgba(240, 184, 108, 0.45);
+}
 
 .logo {
   font-family: var(--font-display);

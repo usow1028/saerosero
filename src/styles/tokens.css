@@ -29,7 +29,7 @@
   --text-muted: #5a7088;
   --border: rgba(74, 144, 184, 0.22);
   --nav-bg: rgba(244, 250, 254, 0.92);
-  --hero-overlay: linear-gradient(90deg, rgba(244, 250, 254, 0.95) 0%, rgba(244, 250, 254, 0.4) 55%, transparent 100%);
+  --hero-overlay: linear-gradient(90deg, rgba(244, 250, 254, 0.88) 0%, rgba(244, 250, 254, 0.35) 50%, transparent 72%);
   --card-hover: rgba(126, 200, 232, 0.15);
 }
 
@@ -41,6 +41,6 @@
   --text-muted: #9ab0d0;
   --border: rgba(126, 200, 232, 0.18);
   --nav-bg: rgba(11, 18, 32, 0.92);
-  --hero-overlay: linear-gradient(90deg, rgba(11, 18, 32, 0.96) 0%, rgba(11, 18, 32, 0.5) 55%, transparent 100%);
+  --hero-overlay: linear-gradient(90deg, rgba(11, 18, 32, 0.9) 0%, rgba(11, 18, 32, 0.42) 48%, transparent 70%);
   --card-hover: rgba(126, 200, 232, 0.12);
 }
