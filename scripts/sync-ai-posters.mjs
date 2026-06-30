@@ -11,7 +11,7 @@ try {
   existing = JSON.parse(readFileSync(path.join(ROOT, 'src/data/ai-posters.json'), 'utf8'));
 } catch { /* fresh */ }
 
-const activeVariant = existing.activeVariant ?? 'v3';
+const activeVariant = existing.activeVariant ?? 'v4';
 const variantDir = path.join(posterRoot, activeVariant);
 const onDisk = new Set(
   existsSync(variantDir)
@@ -27,7 +27,7 @@ writeFileSync(
     ...existing,
     version: existing.version ?? 4,
     activeVariant,
-    variants: existing.variants ?? { v1: 'v1', v2: 'v2', v3: 'v3' },
+    variants: existing.variants ?? { v1: 'v1', v2: 'v2', v3: 'v3', v4: 'v4' },
     updatedAt: new Date().toISOString(),
     jpgIds,
   }, null, 2),
