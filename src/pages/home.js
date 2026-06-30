@@ -4,7 +4,7 @@ import { getLocale, t } from '../i18n/index.js';
 import { createTitleCard } from '../ui/TitleCard.js';
 import { wrapScrollRow } from '../ui/ScrollRow.js';
 import { playButton, infoButton } from '../ui/actions.js';
-import { posterUrl } from '../ui/poster.js';
+import { heroPosterUrl } from '../ui/poster.js';
 import { el } from '../ui/helpers.js';
 
 export async function renderHome(container, navigate) {
@@ -18,7 +18,7 @@ export async function renderHome(container, navigate) {
   if (heroTitle) {
     const hero = el('section', { class: 'hero' });
     const media = el('div', { class: 'hero-media' });
-    const img = el('img', { class: 'hero-img', src: posterUrl(heroTitle.id), alt: '' });
+    const img = el('img', { class: 'hero-img', src: heroPosterUrl(heroTitle.id), alt: '' });
     media.append(img);
     hero.append(media, el('div', { class: 'hero-overlay' }));
     hero.append(el('div', { class: 'hero-content' }, [
