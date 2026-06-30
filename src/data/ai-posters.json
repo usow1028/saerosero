@@ -1,41 +1,17 @@
 {
-  "version": 7,
-  "dynamicTitles": true,
+  "version": 8,
+  "pipeline": "raw+titleArt",
   "artSource": "raw",
-  "activeVariant": "v4",
-  "variants": {
-    "v1": "v1",
-    "v2": "v2",
-    "v3": "v3",
-    "v4": "v4"
-  },
-  "styleCount": 22,
-  "composited": true,
-  "layoutDistribution": {
-    "retroSynthwave": 6,
-    "floatingHead": 7,
-    "mysteryEvidence": 1,
-    "glitchDigital": 5,
-    "saulBass": 2,
-    "neonSign": 7,
-    "collageTorn": 2,
-    "minimalSwiss": 4,
-    "magazineEditorial": 3,
-    "blockbuster": 5,
-    "imaxScope": 2,
-    "animeKeyVisual": 3,
-    "noirThriller": 6,
-    "watercolorSketch": 3,
-    "koreanDrama": 5,
-    "actionBurst": 5,
-    "circlePortrait": 3,
-    "splitDiptych": 2,
-    "filmStrip": 8,
-    "popArt": 3,
-    "romanceNovel": 5,
-    "stampArchive": 2
-  },
-  "updatedAt": "2026-06-30T19:14:05.407Z",
+  "titleArt": true,
+  "locales": [
+    "ko",
+    "en",
+    "ja",
+    "zh-Hans",
+    "es",
+    "pt-BR"
+  ],
+  "updatedAt": "2026-06-30T19:27:25.549Z",
   "jpgIds": [
     "starlight-station",
     "moonlit-harbor",
@@ -126,5 +102,13 @@
     "orbit-bakery",
     "rune-hospital",
     "cinder-bloom"
-  ]
+  ],
+  "titleArtCounts": {
+    "ko": 89,
+    "en": 89,
+    "ja": 89,
+    "zh-Hans": 89,
+    "es": 89,
+    "pt-BR": 89
+  }
 }

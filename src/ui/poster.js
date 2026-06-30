@@ -1,68 +1,75 @@
 import aiPosters from '../data/ai-posters.json';
 import { titleName } from '../services/CatalogService.js';
 import { getLocale } from '../i18n/index.js';
-import { createPosterTitleOverlay } from './PosterTitleOverlay.js';
 
 const jpgIds = new Set(aiPosters.jpgIds ?? []);
-const dynamicTitles = aiPosters.dynamicTitles !== false;
-const artSource = aiPosters.artSource ?? 'raw';
-const bakedVariant = aiPosters.activeVariant ?? 'v4';
+const locales = aiPosters.locales ?? ['ko', 'en', 'ja', 'zh-Hans', 'es', 'pt-BR'];
+const titleArtEnabled = aiPosters.titleArt !== false;
 
-export function posterVariant() {
-  return dynamicTitles ? 'dynamic' : bakedVariant;
-}
-
-/** Text-free art layer — locale can change via CSS overlay */
 export function artPosterUrl(titleId) {
   if (jpgIds.has(titleId)) {
-    return `/assets/posters/${artSource}/${titleId}.jpg`;
+    return `/assets/posters/raw/${titleId}.jpg`;
   }
   return `/assets/posters/${titleId}.svg`;
 }
 
-export function posterUrl(titleId, { preferJpg = true, variant } = {}) {
-  if (dynamicTitles) return artPosterUrl(titleId);
-  const v = variant ?? bakedVariant;
-  if (preferJpg && jpgIds?.has(titleId)) {
-    return `/assets/posters/${v}/${titleId}.jpg`;
-  }
-  return `/assets/posters/${titleId}.svg`;
+export function titleArtUrl(titleId, locale = getLocale()) {
+  return `/assets/posters/titles/${locale}/${titleId}.png`;
+}
+
+export function posterUrl(titleId) {
+  return artPosterUrl(titleId);
 }
 
 export function heroPosterUrl(titleId) {
-  return posterUrl(titleId);
+  return artPosterUrl(titleId);
 }
 
 export function createPosterMedia(title, { animate = true } = {}) {
+  const locale = getLocale();
   const frame = document.createElement('div');
   frame.className = 'poster-frame';
   frame.dataset.titleId = title.id;
 
-  const img = document.createElement('img');
-  img.className = 'poster-img';
-  img.dataset.titleId = title.id;
-  img.alt = titleName(title, getLocale());
-  img.loading = 'lazy';
-  img.decoding = 'async';
-  if (title.heroFocus) {
-    img.style.objectPosition = title.heroFocus;
-  }
+  const art = document.createElement('img');
+  art.className = 'poster-img poster-img--art';
+  art.dataset.titleId = title.id;
+  art.alt = titleName(title, locale);
+  art.loading = 'lazy';
+  art.decoding = 'async';
+  if (title.heroFocus) art.style.objectPosition = title.heroFocus;
 
-  img.src = posterUrl(title.id);
-  img.addEventListener('error', () => {
-    if (img.src.includes('/raw/')) {
-      img.src = `/assets/posters/v4/${title.id}.jpg`;
-      return;
-    }
-    if (img.src.includes('.jpg')) {
-      img.src = `/assets/posters/${title.id}.svg`;
+  art.src = artPosterUrl(title.id);
+  art.addEventListener('error', () => {
+    if (art.src.includes('/raw/')) {
+      art.src = `/assets/posters/v4/${title.id}.jpg`;
+    } else if (art.src.endsWith('.jpg')) {
+      art.src = `/assets/posters/${title.id}.svg`;
     }
   });
 
-  frame.append(img);
+  frame.append(art);
 
-  if (dynamicTitles) {
-    frame.append(createPosterTitleOverlay(title));
+  if (titleArtEnabled) {
+    const titleLayer = document.createElement('img');
+    titleLayer.className = 'poster-title-art';
+    titleLayer.alt = '';
+    titleLayer.loading = 'lazy';
+    titleLayer.decoding = 'async';
+    titleLayer.draggable = false;
+
+    const fallbackChain = [locale, 'en', 'ko', ...locales.filter((l) => l !== locale && l !== 'en' && l !== 'ko')];
+    let fallIdx = 0;
+    const setTitleSrc = (loc) => { titleLayer.src = titleArtUrl(title.id, loc); };
+
+    titleLayer.addEventListener('error', () => {
+      fallIdx += 1;
+      if (fallIdx < fallbackChain.length) setTitleSrc(fallbackChain[fallIdx]);
+      else titleLayer.remove();
+    });
+
+    setTitleSrc(fallbackChain[0]);
+    frame.append(titleLayer);
   }
 
   if (animate) {

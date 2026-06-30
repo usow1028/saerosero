@@ -1,6 +1,6 @@
 {
   "name": "saerosero",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -8,16 +8,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "seed:catalog": "node scripts/seed-catalog.mjs",
-    "seed:posters": "node scripts/generate-posters-rich.mjs",
-    "seed:posters:jpg": "node scripts/render-posters-jpg.mjs",
-    "seed:posters:composite:v1": "node scripts/composite-posters.mjs",
-    "seed:posters:composite:v2": "node scripts/composite-posters-v2.mjs",
-    "seed:posters:composite:v3": "node scripts/composite-posters-v3.mjs",
-    "seed:posters:composite:v4": "node scripts/composite-posters-v4.mjs",
-    "seed:posters:composite": "npm run seed:posters:composite:v4",
-    "posters:variant": "node scripts/set-poster-variant.mjs",
-    "seed:sync": "node scripts/sync-ai-posters.mjs",
-    "seed": "npm run seed:catalog && npm run seed:posters && npm run seed:posters:jpg && npm run seed:posters:composite:v1 && npm run seed:posters:composite:v2 && npm run seed:sync",
+    "seed:posters:art": "node scripts/posters/sync-config.mjs",
+    "seed:posters:titles": "node scripts/posters/render-title-art.mjs",
+    "seed:posters:titles:force": "node scripts/posters/render-title-art.mjs --force",
+    "seed:posters": "npm run seed:posters:art && npm run seed:posters:titles",
+    "seed": "npm run seed:catalog && npm run seed:posters",
     "test": "vitest run"
   },
   "devDependencies": {
