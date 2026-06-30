@@ -121,7 +121,7 @@ for (const title of catalog.titles) {
 
 const jpgIds = readdirSync(outDir).filter((f) => f.endsWith('.jpg')).map((f) => f.replace(/\.jpg$/, ''));
 writeFileSync(
-  path.join(ROOT, 'public/data/ai-posters.json'),
+  path.join(ROOT, 'src/data/ai-posters.json'),
   JSON.stringify({ version: 2, updatedAt: new Date().toISOString(), jpgIds }, null, 2),
 );
 console.log(`Rich SVG posters: ${count} | JPG on disk: ${jpgIds.length}`);

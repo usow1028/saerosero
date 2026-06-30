@@ -1,4 +1,4 @@
-import aiPosters from '../../public/data/ai-posters.json';
+import aiPosters from '../data/ai-posters.json';
 
 const jpgIds = new Set(aiPosters.jpgIds ?? []);
 

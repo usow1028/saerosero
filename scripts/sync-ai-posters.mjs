@@ -9,7 +9,7 @@ const onDisk = new Set(readdirSync(posterDir).filter((f) => f.endsWith('.jpg')).
 const jpgIds = catalog.titles.map((t) => t.id).filter((id) => onDisk.has(id));
 
 writeFileSync(
-  path.join(ROOT, 'public/data/ai-posters.json'),
+  path.join(ROOT, 'src/data/ai-posters.json'),
   JSON.stringify({ version: 2, updatedAt: new Date().toISOString(), jpgIds }, null, 2),
 );
 console.log(`ai-posters.json: ${jpgIds.length} / ${catalog.titles.length} titles with JPG`);
