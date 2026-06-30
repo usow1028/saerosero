@@ -4,7 +4,7 @@ import { getLocale, t } from '../i18n/index.js';
 import { el } from './helpers.js';
 
 const jpgIds = new Set(aiPosters.jpgIds ?? []);
-const activeVariant = aiPosters.activeVariant ?? 'v2';
+const activeVariant = aiPosters.activeVariant ?? 'v3';
 
 const GENRE_CLASS = {
   sf: 'poster-title--sf',
@@ -76,7 +76,9 @@ export function createPosterMedia(title, { animate = true, titleOverlay = null }
   img.src = posterUrl(title.id);
   img.addEventListener('error', () => {
     if (img.src.includes('.jpg')) {
-      const fallbackVariant = img.src.includes('/v2/') ? 'v1' : null;
+      const variants = ['v3', 'v2', 'v1'];
+      const current = variants.find((v) => img.src.includes(`/${v}/`));
+      const fallbackVariant = current ? variants[variants.indexOf(current) + 1] : null;
       if (fallbackVariant && jpgIds.has(title.id)) {
         img.src = posterUrl(title.id, { variant: fallbackVariant });
         return;

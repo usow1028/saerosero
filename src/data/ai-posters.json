@@ -1,20 +1,22 @@
 {
-  "version": 4,
-  "activeVariant": "v2",
+  "version": 5,
+  "activeVariant": "v3",
   "variants": {
     "v1": "v1",
-    "v2": "v2"
+    "v2": "v2",
+    "v3": "v3"
   },
   "composited": true,
+  "integrated": true,
   "layoutDistribution": {
-    "watermark": 12,
-    "edgeBleed": 14,
-    "diagonalSweep": 12,
-    "verticalRail": 16,
-    "cinematic": 20,
-    "logoLockup": 15
+    "verticalFusion": 12,
+    "bleedUnified": 14,
+    "splitClip": 12,
+    "knockoutBlend": 16,
+    "imageFill": 20,
+    "duotoneMerge": 15
   },
-  "updatedAt": "2026-06-30T19:10:05.614Z",
+  "updatedAt": "2026-06-30T19:12:28.074Z",
   "jpgIds": [
     "starlight-station",
     "moonlit-harbor",

@@ -4,8 +4,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const variant = process.argv[2];
-if (!['v1', 'v2'].includes(variant)) {
-  console.error('Usage: node scripts/set-poster-variant.mjs v1|v2');
+if (!['v1', 'v2', 'v3'].includes(variant)) {
+  console.error('Usage: node scripts/set-poster-variant.mjs v1|v2|v3');
   process.exit(1);
 }
 
