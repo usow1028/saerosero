@@ -10,8 +10,9 @@
     "seed:catalog": "node scripts/seed-catalog.mjs",
     "seed:posters": "node scripts/generate-posters-rich.mjs",
     "seed:posters:jpg": "node scripts/render-posters-jpg.mjs",
+    "seed:posters:composite": "node scripts/composite-posters.mjs",
     "seed:sync": "node scripts/sync-ai-posters.mjs",
-    "seed": "npm run seed:catalog && npm run seed:posters && npm run seed:posters:jpg && npm run seed:sync",
+    "seed": "npm run seed:catalog && npm run seed:posters && npm run seed:posters:jpg && npm run seed:posters:composite && npm run seed:sync",
     "test": "vitest run"
   },
   "devDependencies": {

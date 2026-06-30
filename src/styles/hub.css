@@ -166,6 +166,7 @@
 }
 
 .poster-frame {
+  position: relative;
   aspect-ratio: 2 / 3;
   overflow: hidden;
   border-radius: var(--radius-md);
@@ -219,10 +220,70 @@
   backdrop-filter: blur(4px);
 }
 
-.title-card h3 {
-  margin: 0.45rem 0 0;
-  font-size: 0.88rem;
+/* SVG fallback — live title overlay when JPG unavailable */
+.poster-title {
+  position: absolute;
+  inset: auto 0 0 0;
+  padding: 0.55rem 0.5rem 0.5rem;
+  background: linear-gradient(to top, rgba(4, 8, 18, 0.92) 0%, rgba(4, 8, 18, 0.45) 65%, transparent 100%);
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+.poster-title-tag {
+  align-self: flex-start;
+  font-size: 0.48rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+.poster-title-rule {
+  width: 1.4rem;
+  height: 2px;
+  border-radius: 1px;
+  margin: 0.1rem 0 0.15rem;
+}
+.poster-title-primary {
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: #fff;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
+  word-break: keep-all;
+}
+.poster-title-secondary {
+  font-size: 0.5rem;
   font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.82;
+}
+.poster-title--sf .poster-title-tag, .poster-title--sf .poster-title-rule { color: #5eead4; background: #5eead4; }
+.poster-title--sf .poster-title-secondary { color: #a5f3fc; }
+.poster-title--fantasy .poster-title-tag, .poster-title--fantasy .poster-title-rule { color: #c4b5fd; background: #c4b5fd; }
+.poster-title--fantasy .poster-title-secondary { color: #e9d5ff; }
+.poster-title--fantasy .poster-title-primary { font-family: "Noto Serif KR", serif; }
+.poster-title--romance .poster-title-tag, .poster-title--romance .poster-title-rule { color: #fda4af; background: #fda4af; }
+.poster-title--romance .poster-title-secondary { color: #fecdd3; }
+.poster-title--thriller .poster-title-tag, .poster-title--thriller .poster-title-rule { color: #f87171; background: #f87171; }
+.poster-title--thriller .poster-title-secondary { color: #fca5a5; }
+.poster-title--thriller .poster-title-primary { letter-spacing: 0.04em; }
+.poster-title--drama .poster-title-tag, .poster-title--drama .poster-title-rule { color: #fcd34d; background: #fcd34d; }
+.poster-title--drama .poster-title-secondary { color: #fde68a; }
+.poster-title--drama .poster-title-primary { font-family: "Noto Serif KR", serif; }
+.poster-title--mystery .poster-title-tag, .poster-title--mystery .poster-title-rule { color: #a5b4fc; background: #a5b4fc; }
+.poster-title--mystery .poster-title-secondary { color: #c7d2fe; }
+.poster-title--action .poster-title-tag, .poster-title--action .poster-title-rule { color: #fb923c; background: #fb923c; }
+.poster-title--action .poster-title-secondary { color: #fdba74; }
+.poster-title--action .poster-title-primary { font-weight: 800; letter-spacing: 0.03em; }
+
+.title-card-caption {
+  margin: 0.35rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 500;
+  opacity: 0.72;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;

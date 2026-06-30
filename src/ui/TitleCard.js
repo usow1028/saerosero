@@ -20,6 +20,8 @@ export function createTitleCard(title, { onClick, compact = false, showGenre = f
   }
 
   card.append(poster);
-  if (!compact) card.append(el('h3', { text: titleName(title, locale) }));
+  if (!compact) {
+    card.append(el('h3', { class: 'title-card-caption', text: titleName(title, locale) }));
+  }
   return card;
 }

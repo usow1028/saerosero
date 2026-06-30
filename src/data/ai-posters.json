@@ -1,6 +1,7 @@
 {
-  "version": 2,
-  "updatedAt": "2026-06-30T18:59:25.294Z",
+  "version": 3,
+  "composited": true,
+  "updatedAt": "2026-06-30T19:07:37.376Z",
   "jpgIds": [
     "starlight-station",
     "moonlit-harbor",
