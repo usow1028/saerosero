@@ -11,7 +11,7 @@
     "es",
     "pt-BR"
   ],
-  "updatedAt": "2026-06-30T19:33:42.833Z",
+  "updatedAt": "2026-06-30T19:47:46.180Z",
   "jpgIds": [
     "starlight-station",
     "moonlit-harbor",
@@ -111,7 +111,7 @@
     "es": 89,
     "pt-BR": 89
   },
-  "titleStyles": 15,
+  "titleStyles": 16,
   "styleDistribution": {
     "conic-shine": 54,
     "vertical-elegant": 42,
@@ -121,10 +121,11 @@
     "cinematic-glow": 48,
     "impact-stack": 42,
     "neon-sign": 12,
-    "shimmer-gradient": 48,
+    "prismatic-serif": 18,
     "glitch-rgb": 42,
     "noir-cut": 36,
     "anime-bold": 30,
+    "shimmer-gradient": 30,
     "chrome-block": 36,
     "romance-script": 18,
     "brutal-impact": 6

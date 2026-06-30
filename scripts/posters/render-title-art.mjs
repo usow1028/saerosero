@@ -40,7 +40,8 @@ let count = 0;
 const styleUse = {};
 
 for (const job of jobs) {
-  await page.setContent(titleArtHtml(job.title, job.locale, job.style), { waitUntil: 'domcontentloaded' });
+  const html = titleArtHtml(job.title, job.locale, job.style);
+  await page.setContent(html, { waitUntil: 'networkidle' });
   await page.waitForTimeout(100);
   await page.screenshot({ path: job.out, type: 'png', omitBackground: true });
   styleUse[job.style] = (styleUse[job.style] ?? 0) + 1;
