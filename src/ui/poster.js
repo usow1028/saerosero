@@ -1,17 +1,9 @@
-/** Titles with Grok Image (or other AI) raster posters — prefer .jpg over .svg */
-export const AI_POSTER_IDS = new Set([
-  'starlight-station',
-  'moonlit-harbor',
-  'quantum-letters',
-  'title-001',
-  'title-002',
-  'title-003',
-  'title-004',
-  'title-005',
-]);
+import aiPosters from '../../public/data/ai-posters.json';
 
-export function posterUrl(titleId) {
-  if (AI_POSTER_IDS.has(titleId)) {
+const jpgIds = new Set(aiPosters.jpgIds ?? []);
+
+export function posterUrl(titleId, { preferJpg = true } = {}) {
+  if (preferJpg && jpgIds?.has(titleId)) {
     return `/assets/posters/${titleId}.jpg`;
   }
   return `/assets/posters/${titleId}.svg`;
@@ -28,13 +20,18 @@ export function createPosterMedia(title, { animate = true } = {}) {
 
   const img = document.createElement('img');
   img.className = 'poster-img';
-  img.src = posterUrl(title.id);
   img.alt = '';
   img.loading = 'lazy';
   img.decoding = 'async';
   if (title.heroFocus) {
     img.style.objectPosition = title.heroFocus;
   }
+
+  img.src = posterUrl(title.id);
+  img.addEventListener('error', () => {
+    if (img.src.endsWith('.jpg')) img.src = posterUrl(title.id, { preferJpg: false });
+  }, { once: true });
+
   frame.append(img);
 
   if (animate) {

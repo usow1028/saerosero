@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 510" width="340" height="510">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="hsl(285,43%,36%)"/>
+      <stop offset="45%" stop-color="hsl(327,35%,24%)"/>
+      <stop offset="100%" stop-color="hsl(285,30%,14%)"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="72%" cy="18%" r="45%">
+      <stop offset="0%" stop-color="hsla(305,70%,72%,0.55)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <linearGradient id="vignette" x1="50%" y1="50%" x2="50%" y2="100%">
+      <stop offset="55%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.72)"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="340" height="510" fill="url(#sky)"/>
+  <rect width="340" height="510" fill="url(#sun)"/>
+  <circle cx="33" cy="127" r="0.8" fill="white" opacity="0.25"/><circle cx="254" cy="28" r="1.4" fill="white" opacity="0.37"/><circle cx="155" cy="129" r="2" fill="white" opacity="0.49"/><circle cx="56" cy="30" r="0.8" fill="white" opacity="0.61"/><circle cx="277" cy="131" r="1.4" fill="white" opacity="0.73"/><circle cx="178" cy="32" r="2" fill="white" opacity="0.25"/><circle cx="79" cy="133" r="0.8" fill="white" opacity="0.37"/><circle cx="300" cy="34" r="1.4" fill="white" opacity="0.49"/><circle cx="201" cy="135" r="2" fill="white" opacity="0.61"/><circle cx="102" cy="36" r="0.8" fill="white" opacity="0.73"/><circle cx="323" cy="137" r="1.4" fill="white" opacity="0.25"/><circle cx="224" cy="38" r="2" fill="white" opacity="0.37"/><circle cx="125" cy="139" r="0.8" fill="white" opacity="0.49"/><circle cx="26" cy="40" r="1.4" fill="white" opacity="0.61"/><circle cx="247" cy="141" r="2" fill="white" opacity="0.73"/><circle cx="148" cy="42" r="0.8" fill="white" opacity="0.25"/><circle cx="49" cy="143" r="1.4" fill="white" opacity="0.37"/><circle cx="270" cy="44" r="2" fill="white" opacity="0.49"/>
+  <circle cx="161" cy="81" r="36" fill="hsla(335,35%,36%,0.18)"/>
+  <rect x="0" y="280" width="340" height="230" fill="hsla(285,25%,14%,0.35)" filter="url(#blur)" opacity="0.6"/>
+  <ellipse cx="170" cy="201" rx="120" ry="90" fill="hsla(285,45%,36%,0.22)"/>
+  
+  <ellipse cx="170" cy="420" rx="200" ry="55" fill="hsla(285,35%,14%,0.55)"/>
+  <g opacity="0.85">
+    <ellipse cx="170" cy="360" rx="48" ry="12" fill="hsla(285,20%,8%,0.5)"/>
+    <path d="M 151 360 L 170 241 L 184 360 Z" fill="hsla(315,35%,24%,0.75)"/>
+    <circle cx="170" cy="221" r="22" fill="hsla(285,35%,36%,0.9)"/>
+  </g>
+  <rect x="0" y="0" width="340" height="510" fill="url(#vignette)" opacity="0.35"/>
+  <rect width="340" height="510" fill="url(#vignette)"/>
+  <text x="20" y="488" fill="hsla(285,18%,92%,0.7)" font-family="Outfit, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">CANVAS REVOLT</text>
+  <text x="20" y="36" fill="hsla(285,25%,88%,0.35)" font-family="Outfit, system-ui, sans-serif" font-size="9" letter-spacing="0.12em">painted figures stepping out drama</text>
+</svg>

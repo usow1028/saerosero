@@ -8,11 +8,14 @@
     "build": "vite build",
     "preview": "vite preview",
     "seed:catalog": "node scripts/seed-catalog.mjs",
-    "seed:posters": "node scripts/generate-posters.mjs",
-    "seed": "npm run seed:catalog && npm run seed:posters",
+    "seed:posters": "node scripts/generate-posters-rich.mjs",
+    "seed:posters:jpg": "node scripts/render-posters-jpg.mjs",
+    "seed:sync": "node scripts/sync-ai-posters.mjs",
+    "seed": "npm run seed:catalog && npm run seed:posters && npm run seed:posters:jpg && npm run seed:sync",
     "test": "vitest run"
   },
   "devDependencies": {
+    "playwright": "^1.61.1",
     "vite": "^6.2.0",
     "vitest": "^3.0.5"
   }

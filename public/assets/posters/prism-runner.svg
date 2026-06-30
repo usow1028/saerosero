@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 510" width="340" height="510">
+  <defs>
+    <linearGradient id="sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="hsl(290,66%,44%)"/>
+      <stop offset="45%" stop-color="hsl(332,58%,28%)"/>
+      <stop offset="100%" stop-color="hsl(290,53%,16%)"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="72%" cy="18%" r="45%">
+      <stop offset="0%" stop-color="hsla(310,70%,72%,0.55)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <linearGradient id="vignette" x1="50%" y1="50%" x2="50%" y2="100%">
+      <stop offset="55%" stop-color="transparent"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0.72)"/>
+    </linearGradient>
+    <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <rect width="340" height="510" fill="url(#sky)"/>
+  <rect width="340" height="510" fill="url(#sun)"/>
+  <circle cx="107" cy="73" r="0.8" fill="white" opacity="0.25"/><circle cx="246" cy="52" r="1.4" fill="white" opacity="0.37"/><circle cx="65" cy="31" r="2" fill="white" opacity="0.49"/><circle cx="204" cy="210" r="0.8" fill="white" opacity="0.61"/><circle cx="23" cy="189" r="1.4" fill="white" opacity="0.73"/><circle cx="162" cy="168" r="2" fill="white" opacity="0.25"/><circle cx="301" cy="147" r="0.8" fill="white" opacity="0.37"/><circle cx="120" cy="126" r="1.4" fill="white" opacity="0.49"/><circle cx="259" cy="105" r="2" fill="white" opacity="0.61"/><circle cx="78" cy="84" r="0.8" fill="white" opacity="0.73"/><circle cx="217" cy="63" r="1.4" fill="white" opacity="0.25"/><circle cx="36" cy="42" r="2" fill="white" opacity="0.37"/><circle cx="175" cy="21" r="0.8" fill="white" opacity="0.49"/><circle cx="314" cy="200" r="1.4" fill="white" opacity="0.61"/><circle cx="133" cy="179" r="2" fill="white" opacity="0.73"/><circle cx="272" cy="158" r="0.8" fill="white" opacity="0.25"/><circle cx="91" cy="137" r="1.4" fill="white" opacity="0.37"/><circle cx="230" cy="116" r="2" fill="white" opacity="0.49"/>
+  <circle cx="239" cy="159" r="39" fill="hsla(340,58%,44%,0.18)"/>
+  <rect x="0" y="280" width="340" height="230" fill="hsla(290,48%,16%,0.35)" filter="url(#blur)" opacity="0.6"/>
+  <ellipse cx="170" cy="199" rx="120" ry="90" fill="hsla(290,68%,44%,0.22)"/>
+  
+  <ellipse cx="170" cy="420" rx="200" ry="55" fill="hsla(290,58%,16%,0.55)"/>
+  <g opacity="0.85">
+    <ellipse cx="170" cy="360" rx="48" ry="12" fill="hsla(290,20%,8%,0.5)"/>
+    <path d="M 169 360 L 170 239 L 181 360 Z" fill="hsla(320,58%,28%,0.75)"/>
+    <circle cx="170" cy="209" r="22" fill="hsla(290,35%,44%,0.9)"/>
+  </g>
+  <rect x="0" y="0" width="340" height="510" fill="url(#vignette)" opacity="0.35"/>
+  <rect width="340" height="510" fill="url(#vignette)"/>
+  <text x="20" y="488" fill="hsla(290,18%,92%,0.7)" font-family="Outfit, system-ui, sans-serif" font-size="11" font-weight="600" letter-spacing="0.06em">PRISM RUNNER</text>
+  <text x="20" y="36" fill="hsla(290,25%,88%,0.35)" font-family="Outfit, system-ui, sans-serif" font-size="9" letter-spacing="0.12em">parkour light beams city</text>
+</svg>

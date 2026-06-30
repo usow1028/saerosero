@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updatedAt": "2026-06-30T18:00:19.215Z",
+  "version": 2,
+  "updatedAt": "2026-06-30T18:55:09.800Z",
   "titles": [
     {
       "id": "starlight-station",
@@ -9,7 +9,7 @@
       "age": "12",
       "interactive": true,
       "featured": true,
-      "hue": 200,
+      "hue": 198,
       "episodes": 1,
       "titles": {
         "ko": "별빛 정거장",
@@ -19,17 +19,19 @@
         "es": "Estación Starlight"
       },
       "logline": {
-        "ko": "궤도 정거장에서 울리는 신호. 당신의 선택이 밤을 바꾼다.",
-        "en": "A signal echoes through the orbital station. Your choices reshape the night."
+        "ko": "궤도 정거장의 신호. 당신의 선택이 밤을 바갈다.",
+        "en": "A signal on the orbital station. Your choices reshape the night."
       },
       "tags": [
         "sf",
+        "space",
         "interactive"
       ],
       "characters": [
         "아리아",
         "Aria"
-      ]
+      ],
+      "posterScene": "orbital station corridor, sci-fi anime"
     },
     {
       "id": "moonlit-harbor",
@@ -38,7 +40,7 @@
       "age": "12",
       "interactive": true,
       "featured": true,
-      "hue": 220,
+      "hue": 215,
       "episodes": 0,
       "titles": {
         "ko": "달빛 항구",
@@ -48,14 +50,18 @@
         "es": "Puerto Lunar"
       },
       "logline": {
-        "ko": "제작 중인 인터랙티브 시리즈.",
-        "en": "Interactive series in development."
+        "ko": "파도가 사랑을 배달하는 밤의 항구.",
+        "en": "A harbor where tides deliver lost love letters."
       },
       "tags": [
         "romance",
-        "interactive"
+        "sea"
       ],
-      "characters": []
+      "characters": [
+        "하린",
+        "Harin"
+      ],
+      "posterScene": "moonlit pier, romantic anime harbor"
     },
     {
       "id": "quantum-letters",
@@ -64,7 +70,7 @@
       "age": "15",
       "interactive": true,
       "featured": true,
-      "hue": 260,
+      "hue": 262,
       "episodes": 0,
       "titles": {
         "ko": "양자 우편",
@@ -74,1054 +80,2340 @@
         "es": "Cartas Cuánticas"
       },
       "logline": {
-        "ko": "제작 중인 인터랙티브 시리즈.",
-        "en": "Interactive series in development."
+        "ko": "도착하기 전에 읽히는 편지들.",
+        "en": "Letters that are read before they arrive."
+      },
+      "tags": [
+        "mystery",
+        "sci-fi"
+      ],
+      "characters": [
+        "이준",
+        "Jun"
+      ],
+      "posterScene": "glowing envelopes in quantum void"
+    },
+    {
+      "id": "neon-samaritan",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "15",
+      "interactive": true,
+      "featured": true,
+      "hue": 185,
+      "episodes": 0,
+      "titles": {
+        "ko": "네온 사마리아",
+        "en": "Neon Samaritan",
+        "ja": "ネオン・サマリタン",
+        "zh-Hans": "霓虹善人",
+        "es": "El Samaritano Neón"
+      },
+      "logline": {
+        "ko": "사이버 슬럼에서 정의를 배달하는 자.",
+        "en": "A courier of justice in the neon slums."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "cyberpunk alley rain neon signs"
+    },
+    {
+      "id": "glass-garden",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "all",
+      "interactive": true,
+      "featured": true,
+      "hue": 145,
+      "episodes": 0,
+      "titles": {
+        "ko": "유리 정원",
+        "en": "Glass Garden",
+        "ja": "ガラスの庭",
+        "zh-Hans": "玻璃花园",
+        "es": "Jardín de Cristal"
+      },
+      "logline": {
+        "ko": "시간이 꽃처럼 자라는 온실.",
+        "en": "A greenhouse where time blooms like flowers."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "crystal greenhouse fantasy flowers"
+    },
+    {
+      "id": "last-orchestra",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "12",
+      "interactive": true,
+      "featured": true,
+      "hue": 32,
+      "episodes": 0,
+      "titles": {
+        "ko": "마지막 오케스트라",
+        "en": "The Last Orchestra",
+        "ja": "最後のオーケストラ",
+        "zh-Hans": "最后的乐团",
+        "es": "La Última Orquesta"
+      },
+      "logline": {
+        "ko": "세상이 조용해지기 전 마지막 연주.",
+        "en": "One final performance before the world goes silent."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "empty concert hall golden light"
+    },
+    {
+      "id": "iron-bloom",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 8,
+      "episodes": 0,
+      "titles": {
+        "ko": "강철 꽃",
+        "en": "Iron Bloom",
+        "ja": "鋼鉄の花",
+        "zh-Hans": "钢铁之花",
+        "es": "Flor de Hierro"
+      },
+      "logline": {
+        "ko": "폐허에서 피어난 기계 검사.",
+        "en": "A blade-forged knight risen from ruins."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "mecha warrior ruins sunset"
+    },
+    {
+      "id": "silent-witness",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 228,
+      "episodes": 0,
+      "titles": {
+        "ko": "침묵의 목격자",
+        "en": "Silent Witness",
+        "ja": "沈黙の目撃者",
+        "zh-Hans": "沉默的目击者",
+        "es": "Testigo Silencioso"
+      },
+      "logline": {
+        "ko": "기억을 훔친 도시의 감시 카메라.",
+        "en": "Surveillance feeds that steal memories."
+      },
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "noir detective rain city"
+    },
+    {
+      "id": "candy-orbit",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 310,
+      "episodes": 0,
+      "titles": {
+        "ko": "캔디 궤도",
+        "en": "Candy Orbit",
+        "ja": "キャンディ軌道",
+        "zh-Hans": "糖果轨道",
+        "es": "Órbita de Caramelo"
+      },
+      "logline": {
+        "ko": "행성 사이를 오가는 달콤한 우주 편지.",
+        "en": "Sweet letters drifting between tiny planets."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "cute planets pastel space romance"
+    },
+    {
+      "id": "paper-comet",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 52,
+      "episodes": 0,
+      "titles": {
+        "ko": "종이 혜성",
+        "en": "Paper Comet",
+        "ja": "紙の彗星",
+        "zh-Hans": "纸彗星",
+        "es": "Cometa de Papel"
+      },
+      "logline": {
+        "ko": "소원을 적으면 하늘을 가르는 편지.",
+        "en": "Write a wish; the letter tears the sky."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "origami comet starry sky"
+    },
+    {
+      "id": "deep-signal",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 205,
+      "episodes": 0,
+      "titles": {
+        "ko": "심해 신호",
+        "en": "Deep Signal",
+        "ja": "深海信号",
+        "zh-Hans": "深海信号",
+        "es": "Señal Abisal"
+      },
+      "logline": {
+        "ko": "해저 4km에서 온 인류 이전의 코드.",
+        "en": "Pre-human code pulsing from the abyss."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "submarine abyss bioluminescence"
+    },
+    {
+      "id": "velvet-rebellion",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 340,
+      "episodes": 0,
+      "titles": {
+        "ko": "벨벳 반란",
+        "en": "Velvet Rebellion",
+        "ja": "ベルベットの反乱",
+        "zh-Hans": "天鹅绒叛乱",
+        "es": "Rebelión de Terciopelo"
+      },
+      "logline": {
+        "ko": "무대 뒤에서 일어난 궁정의 음모.",
+        "en": "Court intrigue behind the velvet curtain."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "theater stage red curtain drama"
+    },
+    {
+      "id": "clockwork-rain",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 175,
+      "episodes": 0,
+      "titles": {
+        "ko": "시계태엽 비",
+        "en": "Clockwork Rain",
+        "ja": "時計仕掛けの雨",
+        "zh-Hans": "发条之雨",
+        "es": "Lluvia de Relojes"
+      },
+      "logline": {
+        "ko": "비 한 방울마다 하루가 되감긴다.",
+        "en": "Each raindrop rewinds one day."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "steampunk city raining gears"
+    },
+    {
+      "id": "hollow-echo",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 248,
+      "episodes": 0,
+      "titles": {
+        "ko": "공허의 메아리",
+        "en": "Hollow Echo",
+        "ja": "虚ろのこだま",
+        "zh-Hans": "空洞回响",
+        "es": "Eco Hueco"
+      },
+      "logline": {
+        "ko": "삭제된 목소리가 터널에 남긴 흔적.",
+        "en": "Deleted voices still resonate in the tunnel."
       },
       "tags": [
         "mystery",
         "interactive"
       ],
-      "characters": []
+      "characters": [],
+      "posterScene": "abandoned subway mysterious light"
     },
     {
-      "id": "title-001",
-      "status": "coming_soon",
-      "genre": "fantasy",
-      "age": "12",
-      "interactive": true,
-      "hue": 37,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 1",
-        "en": "Interlude 1",
-        "ja": "間奏曲 1",
-        "zh-Hans": "插曲 1",
-        "es": "Interludio 1"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-002",
-      "status": "coming_soon",
-      "genre": "romance",
-      "age": "15",
-      "interactive": true,
-      "hue": 74,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 2",
-        "en": "Interlude 2",
-        "ja": "間奏曲 2",
-        "zh-Hans": "插曲 2",
-        "es": "Interludio 2"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-003",
-      "status": "coming_soon",
-      "genre": "thriller",
-      "age": "19",
-      "interactive": true,
-      "hue": 111,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 3",
-        "en": "Interlude 3",
-        "ja": "間奏曲 3",
-        "zh-Hans": "插曲 3",
-        "es": "Interludio 3"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-004",
-      "status": "coming_soon",
-      "genre": "drama",
-      "age": "all",
-      "interactive": true,
-      "hue": 148,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 4",
-        "en": "Interlude 4",
-        "ja": "間奏曲 4",
-        "zh-Hans": "插曲 4",
-        "es": "Interludio 4"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-005",
-      "status": "coming_soon",
-      "genre": "mystery",
-      "age": "12",
-      "interactive": true,
-      "hue": 185,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 5",
-        "en": "Interlude 5",
-        "ja": "間奏曲 5",
-        "zh-Hans": "插曲 5",
-        "es": "Interludio 5"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-006",
+      "id": "solar-ash",
       "status": "coming_soon",
       "genre": "action",
       "age": "15",
       "interactive": true,
-      "hue": 222,
-      "episodes": 1,
+      "featured": false,
+      "hue": 18,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 6",
-        "en": "Interlude 6",
-        "ja": "間奏曲 6",
-        "zh-Hans": "插曲 6",
-        "es": "Interludio 6"
+        "ko": "태양 잿더미",
+        "en": "Solar Ash",
+        "ja": "太陽の灰",
+        "zh-Hans": "太阳灰烬",
+        "es": "Ceniza Solar"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-007",
-      "status": "coming_soon",
-      "genre": "sf",
-      "age": "19",
-      "interactive": true,
-      "hue": 259,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 7",
-        "en": "Interlude 7",
-        "ja": "間奏曲 7",
-        "zh-Hans": "插曲 7",
-        "es": "Interludio 7"
+        "ko": "타버린 행성을 가로지르는 도주.",
+        "en": "Escape across a scorched frontier world."
       },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "desert warrior solar flare"
     },
     {
-      "id": "title-008",
-      "status": "coming_soon",
-      "genre": "fantasy",
-      "age": "all",
-      "interactive": true,
-      "hue": 296,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 8",
-        "en": "Interlude 8",
-        "ja": "間奏曲 8",
-        "zh-Hans": "插曲 8",
-        "es": "Interludio 8"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-009",
+      "id": "mirror-lake",
       "status": "coming_soon",
       "genre": "romance",
       "age": "12",
       "interactive": true,
-      "hue": 333,
-      "episodes": 1,
+      "featured": false,
+      "hue": 192,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 9",
-        "en": "Interlude 9",
-        "ja": "間奏曲 9",
-        "zh-Hans": "插曲 9",
-        "es": "Interludio 9"
+        "ko": "거울 호수",
+        "en": "Mirror Lake",
+        "ja": "鏡の湖",
+        "zh-Hans": "镜湖",
+        "es": "Lago Espejo"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-010",
-      "status": "coming_soon",
-      "genre": "thriller",
-      "age": "15",
-      "interactive": true,
-      "hue": 10,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 10",
-        "en": "Interlude 10",
-        "ja": "間奏曲 10",
-        "zh-Hans": "插曲 10",
-        "es": "Interludio 10"
+        "ko": "반영된 자신과 다시 만나는 여름.",
+        "en": "A summer reunion with your reflected self."
       },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "lake reflection two figures anime"
     },
     {
-      "id": "title-011",
-      "status": "coming_soon",
-      "genre": "drama",
-      "age": "19",
-      "interactive": true,
-      "hue": 47,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 11",
-        "en": "Interlude 11",
-        "ja": "間奏曲 11",
-        "zh-Hans": "插曲 11",
-        "es": "Interludio 11"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-012",
-      "status": "coming_soon",
-      "genre": "mystery",
-      "age": "all",
-      "interactive": true,
-      "hue": 84,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 12",
-        "en": "Interlude 12",
-        "ja": "間奏曲 12",
-        "zh-Hans": "插曲 12",
-        "es": "Interludio 12"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-013",
-      "status": "coming_soon",
-      "genre": "action",
-      "age": "12",
-      "interactive": true,
-      "hue": 121,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 13",
-        "en": "Interlude 13",
-        "ja": "間奏曲 13",
-        "zh-Hans": "插曲 13",
-        "es": "Interludio 13"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-014",
-      "status": "coming_soon",
-      "genre": "sf",
-      "age": "15",
-      "interactive": true,
-      "hue": 158,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 14",
-        "en": "Interlude 14",
-        "ja": "間奏曲 14",
-        "zh-Hans": "插曲 14",
-        "es": "Interludio 14"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-015",
-      "status": "coming_soon",
-      "genre": "fantasy",
-      "age": "19",
-      "interactive": true,
-      "hue": 195,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 15",
-        "en": "Interlude 15",
-        "ja": "間奏曲 15",
-        "zh-Hans": "插曲 15",
-        "es": "Interludio 15"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-016",
-      "status": "coming_soon",
-      "genre": "romance",
-      "age": "all",
-      "interactive": true,
-      "hue": 232,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 16",
-        "en": "Interlude 16",
-        "ja": "間奏曲 16",
-        "zh-Hans": "插曲 16",
-        "es": "Interludio 16"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-017",
-      "status": "coming_soon",
-      "genre": "thriller",
-      "age": "12",
-      "interactive": true,
-      "hue": 269,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 17",
-        "en": "Interlude 17",
-        "ja": "間奏曲 17",
-        "zh-Hans": "插曲 17",
-        "es": "Interludio 17"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-018",
-      "status": "coming_soon",
-      "genre": "drama",
-      "age": "15",
-      "interactive": true,
-      "hue": 306,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 18",
-        "en": "Interlude 18",
-        "ja": "間奏曲 18",
-        "zh-Hans": "插曲 18",
-        "es": "Interludio 18"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-019",
-      "status": "coming_soon",
-      "genre": "mystery",
-      "age": "19",
-      "interactive": true,
-      "hue": 343,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 19",
-        "en": "Interlude 19",
-        "ja": "間奏曲 19",
-        "zh-Hans": "插曲 19",
-        "es": "Interludio 19"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-020",
-      "status": "coming_soon",
-      "genre": "action",
-      "age": "all",
-      "interactive": true,
-      "hue": 20,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 20",
-        "en": "Interlude 20",
-        "ja": "間奏曲 20",
-        "zh-Hans": "插曲 20",
-        "es": "Interludio 20"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-021",
+      "id": "fractal-dream",
       "status": "coming_soon",
       "genre": "sf",
       "age": "12",
       "interactive": true,
-      "hue": 57,
-      "episodes": 1,
+      "featured": false,
+      "hue": 280,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 21",
-        "en": "Interlude 21",
-        "ja": "間奏曲 21",
-        "zh-Hans": "插曲 21",
-        "es": "Interludio 21"
+        "ko": "프랙탈 드림",
+        "en": "Fractal Dream",
+        "ja": "フラクタル・ドリーム",
+        "zh-Hans": "分形之梦",
+        "es": "Sueño Fractal"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+        "ko": "무한히 반복되는 꿈의 시뮬레이션.",
+        "en": "A simulation of endlessly repeating dreams."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "fractal tunnel digital dream"
     },
     {
-      "id": "title-022",
+      "id": "ember-chronicle",
       "status": "coming_soon",
       "genre": "fantasy",
       "age": "15",
       "interactive": true,
-      "hue": 94,
-      "episodes": 1,
+      "featured": false,
+      "hue": 24,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 22",
-        "en": "Interlude 22",
-        "ja": "間奏曲 22",
-        "zh-Hans": "插曲 22",
-        "es": "Interludio 22"
+        "ko": "잔불 연대기",
+        "en": "Ember Chronicle",
+        "ja": "残火年代記",
+        "zh-Hans": "余烬纪",
+        "es": "Crónica de Brasas"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+        "ko": "멸망한 왕국의 마지막 화염 마법사.",
+        "en": "The last flame mage of a fallen kingdom."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "fire mage castle ruins fantasy"
     },
     {
-      "id": "title-023",
+      "id": "zero-gravity-waltz",
       "status": "coming_soon",
       "genre": "romance",
-      "age": "19",
-      "interactive": true,
-      "hue": 131,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 23",
-        "en": "Interlude 23",
-        "ja": "間奏曲 23",
-        "zh-Hans": "插曲 23",
-        "es": "Interludio 23"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-024",
-      "status": "coming_soon",
-      "genre": "thriller",
       "age": "all",
       "interactive": true,
-      "hue": 168,
-      "episodes": 1,
+      "featured": false,
+      "hue": 300,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 24",
-        "en": "Interlude 24",
-        "ja": "間奏曲 24",
-        "zh-Hans": "插曲 24",
-        "es": "Interludio 24"
+        "ko": "무중력 왈츠",
+        "en": "Zero Gravity Waltz",
+        "ja": "無重力ワルツ",
+        "zh-Hans": "零重力华尔兹",
+        "es": "Vals en Gravedad Cero"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-025",
-      "status": "coming_soon",
-      "genre": "drama",
-      "age": "12",
-      "interactive": true,
-      "hue": 205,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 25",
-        "en": "Interlude 25",
-        "ja": "間奏曲 25",
-        "zh-Hans": "插曲 25",
-        "es": "Interludio 25"
+        "ko": "떠다니는 연주회에서의 첫 춤.",
+        "en": "A first dance at a floating concert."
       },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "couple dancing zero gravity ballroom"
     },
     {
-      "id": "title-026",
-      "status": "coming_soon",
-      "genre": "mystery",
-      "age": "15",
-      "interactive": true,
-      "hue": 242,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 26",
-        "en": "Interlude 26",
-        "ja": "間奏曲 26",
-        "zh-Hans": "插曲 26",
-        "es": "Interludio 26"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-027",
-      "status": "coming_soon",
-      "genre": "action",
-      "age": "19",
-      "interactive": true,
-      "hue": 279,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 27",
-        "en": "Interlude 27",
-        "ja": "間奏曲 27",
-        "zh-Hans": "插曲 27",
-        "es": "Interludio 27"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-028",
-      "status": "coming_soon",
-      "genre": "sf",
-      "age": "all",
-      "interactive": true,
-      "hue": 316,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 28",
-        "en": "Interlude 28",
-        "ja": "間奏曲 28",
-        "zh-Hans": "插曲 28",
-        "es": "Interludio 28"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-029",
-      "status": "coming_soon",
-      "genre": "fantasy",
-      "age": "12",
-      "interactive": true,
-      "hue": 353,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 29",
-        "en": "Interlude 29",
-        "ja": "間奏曲 29",
-        "zh-Hans": "插曲 29",
-        "es": "Interludio 29"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-030",
-      "status": "coming_soon",
-      "genre": "romance",
-      "age": "15",
-      "interactive": true,
-      "hue": 30,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 30",
-        "en": "Interlude 30",
-        "ja": "間奏曲 30",
-        "zh-Hans": "插曲 30",
-        "es": "Interludio 30"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-031",
+      "id": "crimson-archive",
       "status": "coming_soon",
       "genre": "thriller",
       "age": "19",
       "interactive": true,
-      "hue": 67,
-      "episodes": 1,
+      "featured": false,
+      "hue": 355,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 31",
-        "en": "Interlude 31",
-        "ja": "間奏曲 31",
-        "zh-Hans": "插曲 31",
-        "es": "Interludio 31"
+        "ko": "진홍 기록원",
+        "en": "Crimson Archive",
+        "ja": "深紅の記録院",
+        "zh-Hans": "深红档案库",
+        "es": "Archivo Carmesí"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-032",
-      "status": "coming_soon",
-      "genre": "drama",
-      "age": "all",
-      "interactive": true,
-      "hue": 104,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 32",
-        "en": "Interlude 32",
-        "ja": "間奏曲 32",
-        "zh-Hans": "插曲 32",
-        "es": "Interludio 32"
+        "ko": "삭제 금지된 사건만 모아둔 도서관.",
+        "en": "A library of forbidden case files."
       },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "dark library red candles thriller"
     },
     {
-      "id": "title-033",
+      "id": "sky-pilgrim",
       "status": "coming_soon",
-      "genre": "mystery",
+      "genre": "action",
       "age": "12",
       "interactive": true,
-      "hue": 141,
-      "episodes": 1,
+      "featured": false,
+      "hue": 42,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 33",
-        "en": "Interlude 33",
-        "ja": "間奏曲 33",
-        "zh-Hans": "插曲 33",
-        "es": "Interludio 33"
+        "ko": "하늘 순례자",
+        "en": "Sky Pilgrim",
+        "ja": "空の巡礼者",
+        "zh-Hans": "天空朝圣者",
+        "es": "Peregrino del Cielo"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+        "ko": "떠다니는 사원을 향한 격투 순례.",
+        "en": "A martial pilgrimage to a floating temple."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "monk leaping floating temples"
     },
     {
-      "id": "title-034",
+      "id": "petal-strike",
       "status": "coming_soon",
       "genre": "action",
       "age": "15",
       "interactive": true,
-      "hue": 178,
-      "episodes": 1,
+      "featured": false,
+      "hue": 330,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 34",
-        "en": "Interlude 34",
-        "ja": "間奏曲 34",
-        "zh-Hans": "插曲 34",
-        "es": "Interludio 34"
+        "ko": "꽃잎 타격",
+        "en": "Petal Strike",
+        "ja": "花弁の一撃",
+        "zh-Hans": "花瓣一击",
+        "es": "Golpe de Pétalos"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+        "ko": "검객이 꽃으로 베는 비밀 결투.",
+        "en": "Secret duels where blades are made of petals."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "swordsman cherry blossoms action"
     },
     {
-      "id": "title-035",
+      "id": "winter-circuit",
       "status": "coming_soon",
       "genre": "sf",
-      "age": "19",
-      "interactive": true,
-      "hue": 215,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 35",
-        "en": "Interlude 35",
-        "ja": "間奏曲 35",
-        "zh-Hans": "插曲 35",
-        "es": "Interludio 35"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-036",
-      "status": "coming_soon",
-      "genre": "fantasy",
-      "age": "all",
-      "interactive": true,
-      "hue": 252,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 36",
-        "en": "Interlude 36",
-        "ja": "間奏曲 36",
-        "zh-Hans": "插曲 36",
-        "es": "Interludio 36"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-037",
-      "status": "coming_soon",
-      "genre": "romance",
       "age": "12",
       "interactive": true,
-      "hue": 289,
-      "episodes": 1,
+      "featured": false,
+      "hue": 210,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 37",
-        "en": "Interlude 37",
-        "ja": "間奏曲 37",
-        "zh-Hans": "插曲 37",
-        "es": "Interludio 37"
+        "ko": "겨울 회로",
+        "en": "Winter Circuit",
+        "ja": "冬の回路",
+        "zh-Hans": "冬日回路",
+        "es": "Circuito Invernal"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+        "ko": "영구 동토 아래 숨은 도시의 AI.",
+        "en": "An AI awakening beneath the permafrost city."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "frozen city circuits blue ice"
     },
     {
-      "id": "title-038",
+      "id": "honey-theorem",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 38,
+      "episodes": 0,
+      "titles": {
+        "ko": "꿀 정리",
+        "en": "Honey Theorem",
+        "ja": "蜂蜜定理",
+        "zh-Hans": "蜂蜜定理",
+        "es": "Teorema de Miel"
+      },
+      "logline": {
+        "ko": "수학과 요리로 가족을 붙잡는 공식.",
+        "en": "A formula to hold a family together with math and cooking."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "warm kitchen sunlight family drama"
+    },
+    {
+      "id": "lunar-cartographer",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 235,
+      "episodes": 0,
+      "titles": {
+        "ko": "달 지도 제작자",
+        "en": "Lunar Cartographer",
+        "ja": "月の地図師",
+        "zh-Hans": "月面制图师",
+        "es": "Cartógrafo Lunar"
+      },
+      "logline": {
+        "ko": "달에만 존재하는 거리를 그리는 소녀.",
+        "en": "A girl mapping streets that exist only on the moon."
+      },
+      "tags": [
+        "mystery",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "girl mapping moon surface mystery"
+    },
+    {
+      "id": "azure-veil",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 200,
+      "episodes": 0,
+      "titles": {
+        "ko": "청색 베일",
+        "en": "Azure Veil",
+        "ja": "蒼いベール",
+        "zh-Hans": "青纱",
+        "es": "Velo Azur"
+      },
+      "logline": {
+        "ko": "신부의 면사포 너머의 다른 정체.",
+        "en": "Another identity behind the azure wedding veil."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "bride blue veil wind romance"
+    },
+    {
+      "id": "static-paradise",
       "status": "coming_soon",
       "genre": "thriller",
-      "age": "15",
-      "interactive": true,
-      "hue": 326,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 38",
-        "en": "Interlude 38",
-        "ja": "間奏曲 38",
-        "zh-Hans": "插曲 38",
-        "es": "Interludio 38"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-039",
-      "status": "coming_soon",
-      "genre": "drama",
       "age": "19",
       "interactive": true,
-      "hue": 3,
-      "episodes": 1,
+      "featured": false,
+      "hue": 160,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 39",
-        "en": "Interlude 39",
-        "ja": "間奏曲 39",
-        "zh-Hans": "插曲 39",
-        "es": "Interludio 39"
+        "ko": "잡음 낙원",
+        "en": "Static Paradise",
+        "ja": "雑音の楽園",
+        "zh-Hans": "噪点乐园",
+        "es": "Paraíso Estático"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-040",
-      "status": "coming_soon",
-      "genre": "mystery",
-      "age": "all",
-      "interactive": true,
-      "hue": 40,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 40",
-        "en": "Interlude 40",
-        "ja": "間奏曲 40",
-        "zh-Hans": "插曲 40",
-        "es": "Interludio 40"
+        "ko": "완벽한 마을의 TV 잡음 속 진실.",
+        "en": "Truth hidden in the static of a perfect town."
       },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "suburban horror TV static"
     },
     {
-      "id": "title-041",
+      "id": "dragon-sidestreet",
       "status": "coming_soon",
-      "genre": "action",
+      "genre": "fantasy",
       "age": "12",
       "interactive": true,
-      "hue": 77,
-      "episodes": 1,
+      "featured": false,
+      "hue": 118,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 41",
-        "en": "Interlude 41",
-        "ja": "間奏曲 41",
-        "zh-Hans": "插曲 41",
-        "es": "Interludio 41"
+        "ko": "용의 골목",
+        "en": "Dragon Sidestreet",
+        "ja": "龍の路地",
+        "zh-Hans": "龙之小巷",
+        "es": "Callejón del Dragón"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+        "ko": "대도시 뒤편에 숨은 미니어처 용.",
+        "en": "A miniature dragon hidden in the city back alleys."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "small dragon neon alley fantasy"
     },
     {
-      "id": "title-042",
+      "id": "binary-sonata",
       "status": "coming_soon",
       "genre": "sf",
       "age": "15",
       "interactive": true,
-      "hue": 114,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 42",
-        "en": "Interlude 42",
-        "ja": "間奏曲 42",
-        "zh-Hans": "插曲 42",
-        "es": "Interludio 42"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-043",
-      "status": "coming_soon",
-      "genre": "fantasy",
-      "age": "19",
-      "interactive": true,
-      "hue": 151,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 43",
-        "en": "Interlude 43",
-        "ja": "間奏曲 43",
-        "zh-Hans": "插曲 43",
-        "es": "Interludio 43"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-044",
-      "status": "coming_soon",
-      "genre": "romance",
-      "age": "all",
-      "interactive": true,
+      "featured": false,
       "hue": 188,
-      "episodes": 1,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 44",
-        "en": "Interlude 44",
-        "ja": "間奏曲 44",
-        "zh-Hans": "插曲 44",
-        "es": "Interludio 44"
+        "ko": "바이너리 소나타",
+        "en": "Binary Sonata",
+        "ja": "バイナリソナタ",
+        "zh-Hans": "二进制奏鸣曲",
+        "es": "Sonata Binaria"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+        "ko": "두 AI가 함께 쓴 교향곡의 버그.",
+        "en": "A symphony co-written by two AIs—now glitching."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "piano hologram code symphony"
     },
     {
-      "id": "title-045",
+      "id": "frost-letter",
       "status": "coming_soon",
-      "genre": "thriller",
+      "genre": "romance",
       "age": "12",
       "interactive": true,
-      "hue": 225,
-      "episodes": 1,
+      "featured": false,
+      "hue": 195,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 45",
-        "en": "Interlude 45",
-        "ja": "間奏曲 45",
-        "zh-Hans": "插曲 45",
-        "es": "Interludio 45"
+        "ko": "서리 편지",
+        "en": "Frost Letter",
+        "ja": "霜の手紙",
+        "zh-Hans": "霜信",
+        "es": "Carta de Escarcha"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-046",
-      "status": "coming_soon",
-      "genre": "drama",
-      "age": "15",
-      "interactive": true,
-      "hue": 262,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 46",
-        "en": "Interlude 46",
-        "ja": "間奏曲 46",
-        "zh-Hans": "插曲 46",
-        "es": "Interludio 46"
+        "ko": "겨울마다 창문에 나타나는 이름.",
+        "en": "A name that appears on the window each winter."
       },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "frost window letter romance"
     },
     {
-      "id": "title-047",
-      "status": "coming_soon",
-      "genre": "mystery",
-      "age": "19",
-      "interactive": true,
-      "hue": 299,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 47",
-        "en": "Interlude 47",
-        "ja": "間奏曲 47",
-        "zh-Hans": "插曲 47",
-        "es": "Interludio 47"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-048",
-      "status": "coming_soon",
-      "genre": "action",
-      "age": "all",
-      "interactive": true,
-      "hue": 336,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 48",
-        "en": "Interlude 48",
-        "ja": "間奏曲 48",
-        "zh-Hans": "插曲 48",
-        "es": "Interludio 48"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-049",
-      "status": "coming_soon",
-      "genre": "sf",
-      "age": "12",
-      "interactive": true,
-      "hue": 13,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 49",
-        "en": "Interlude 49",
-        "ja": "間奏曲 49",
-        "zh-Hans": "插曲 49",
-        "es": "Interludio 49"
-      },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-050",
+      "id": "obsidian-circus",
       "status": "coming_soon",
       "genre": "fantasy",
       "age": "15",
       "interactive": true,
-      "hue": 50,
-      "episodes": 1,
+      "featured": false,
+      "hue": 268,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 50",
-        "en": "Interlude 50",
-        "ja": "間奏曲 50",
-        "zh-Hans": "插曲 50",
-        "es": "Interludio 50"
+        "ko": "흑요석 서커스",
+        "en": "Obsidian Circus",
+        "ja": "黒曜石サーカス",
+        "zh-Hans": "黑曜马戏团",
+        "es": "Circo de Obsidiana"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
-    },
-    {
-      "id": "title-051",
-      "status": "coming_soon",
-      "genre": "romance",
-      "age": "19",
-      "interactive": true,
-      "hue": 87,
-      "episodes": 1,
-      "titles": {
-        "ko": "인터루드 51",
-        "en": "Interlude 51",
-        "ja": "間奏曲 51",
-        "zh-Hans": "插曲 51",
-        "es": "Interludio 51"
+        "ko": "자정에만 열리는 칠흑 텐트.",
+        "en": "A pitch-black tent that opens only at midnight."
       },
-      "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "dark circus tent purple lights"
     },
     {
-      "id": "title-052",
+      "id": "parallel-bookshop",
       "status": "coming_soon",
-      "genre": "thriller",
+      "genre": "mystery",
       "age": "all",
       "interactive": true,
-      "hue": 124,
-      "episodes": 1,
+      "featured": false,
+      "hue": 88,
+      "episodes": 0,
       "titles": {
-        "ko": "인터루드 52",
-        "en": "Interlude 52",
-        "ja": "間奏曲 52",
-        "zh-Hans": "插曲 52",
-        "es": "Interludio 52"
+        "ko": "평행 서점",
+        "en": "Parallel Bookshop",
+        "ja": "平行書店",
+        "zh-Hans": "平行书店",
+        "es": "Librería Paralela"
       },
       "logline": {
-        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
-        "en": "Coming soon — a new interactive story."
-      }
+        "ko": "다른 세계의 자신이 쓴 책만 판다.",
+        "en": "A shop that sells books written by your other selves."
+      },
+      "tags": [
+        "mystery",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "cozy bookshop portals mystery"
+    },
+    {
+      "id": "thunder-bloom",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 55,
+      "episodes": 0,
+      "titles": {
+        "ko": "뇌전 개화",
+        "en": "Thunder Bloom",
+        "ja": "雷花",
+        "zh-Hans": "雷花",
+        "es": "Flor del Trueno"
+      },
+      "logline": {
+        "ko": "번개 속에서만 피는 꽃을 지키는 자.",
+        "en": "Guardians of flowers that bloom only in lightning."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "lightning field warrior flowers"
+    },
+    {
+      "id": "sandglass-children",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 28,
+      "episodes": 0,
+      "titles": {
+        "ko": "모래시계 아이들",
+        "en": "Sandglass Children",
+        "ja": "砂時計の子供たち",
+        "zh-Hans": "沙漏之子",
+        "es": "Niños del Reloj de Arena"
+      },
+      "logline": {
+        "ko": "시간이 거꾸로 흐르는 마을의 성장.",
+        "en": "Growing up in a town where time runs backward."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "children sandglass village sunset"
+    },
+    {
+      "id": "violet-border",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 275,
+      "episodes": 0,
+      "titles": {
+        "ko": "보라색 국경",
+        "en": "Violet Border",
+        "ja": "紫の国境",
+        "zh-Hans": "紫色边境",
+        "es": "Frontera Violeta"
+      },
+      "logline": {
+        "ko": "국경 검문소에서 사라진 여권의 주인.",
+        "en": "The owner of a passport that vanished at customs."
+      },
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "border checkpoint fog thriller"
+    },
+    {
+      "id": "starfruit-cafe",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 315,
+      "episodes": 0,
+      "titles": {
+        "ko": "스타프루트 카페",
+        "en": "Starfruit Café",
+        "ja": "スターフルーツカフェ",
+        "zh-Hans": "杨桃咖啡馆",
+        "es": "Café Carambola"
+      },
+      "logline": {
+        "ko": "별 모양 과일이 인연을 맺어주는 곳.",
+        "en": "Where star-shaped fruit pairs destined lovers."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "cozy cafe starfruit romance"
+    },
+    {
+      "id": "gravity-waltz",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 182,
+      "episodes": 0,
+      "titles": {
+        "ko": "중력 왈츠",
+        "en": "Gravity Waltz",
+        "ja": "重力ワルツ",
+        "zh-Hans": "重力华尔兹",
+        "es": "Vals Gravitacional"
+      },
+      "logline": {
+        "ko": "중력이 바뀌는 행성의 첫 축제.",
+        "en": "The first festival on a planet of shifting gravity."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "floating festival planet sci-fi"
+    },
+    {
+      "id": "ink-republic",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 220,
+      "episodes": 0,
+      "titles": {
+        "ko": "잉크 공화국",
+        "en": "Ink Republic",
+        "ja": "インク共和国",
+        "zh-Hans": "墨水共和国",
+        "es": "República de Tinta"
+      },
+      "logline": {
+        "ko": "말이 현실이 되는 만화 왕국.",
+        "en": "A comic kingdom where spoken words become real."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "ink ocean floating islands fantasy"
+    },
+    {
+      "id": "afterglow-taxi",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 14,
+      "episodes": 0,
+      "titles": {
+        "ko": "애프터글로 택시",
+        "en": "Afterglow Taxi",
+        "ja": "アフターグロウ・タクシー",
+        "zh-Hans": "余晖出租车",
+        "es": "Taxi del Ocaso"
+      },
+      "logline": {
+        "ko": "저녁노을만 태우는 기사의 마지막 승객.",
+        "en": "A driver who only picks up passengers at sunset."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "taxi sunset city drama"
+    },
+    {
+      "id": "coral-code",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 168,
+      "episodes": 0,
+      "titles": {
+        "ko": "산호 코드",
+        "en": "Coral Code",
+        "ja": "珊瑚コード",
+        "zh-Hans": "珊瑚代码",
+        "es": "Código Coral"
+      },
+      "logline": {
+        "ko": "살아 있는 산호가 기록한 바다의 역사.",
+        "en": "Living coral archiving the ocean's history."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "underwater coral reef sci-fi"
+    },
+    {
+      "id": "phantom-bakery",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 45,
+      "episodes": 0,
+      "titles": {
+        "ko": "유령 제과점",
+        "en": "Phantom Bakery",
+        "ja": "幻影のパン屋",
+        "zh-Hans": "幽灵面包店",
+        "es": "Panadería Fantasma"
+      },
+      "logline": {
+        "ko": "새벽 3시에만 문을 여는 빵집.",
+        "en": "A bakery that opens only at 3 a.m."
+      },
+      "tags": [
+        "mystery",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "bakery night warm light mystery"
+    },
+    {
+      "id": "silver-tide",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 208,
+      "episodes": 0,
+      "titles": {
+        "ko": "은빛 조수",
+        "en": "Silver Tide",
+        "ja": "銀の潮",
+        "zh-Hans": "银潮",
+        "es": "Marea Plateada"
+      },
+      "logline": {
+        "ko": "밀물마다 다시 찾아오는 그 사람.",
+        "en": "Someone who returns with every high tide."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "silver beach tide romance"
+    },
+    {
+      "id": "bone-garden",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 95,
+      "episodes": 0,
+      "titles": {
+        "ko": "뼈 정원",
+        "en": "Bone Garden",
+        "ja": "骨の庭",
+        "zh-Hans": "骨园",
+        "es": "Jardín de Huesos"
+      },
+      "logline": {
+        "ko": "화분 아래 묻힌 도시의 기록.",
+        "en": "Records of a city buried beneath the planters."
+      },
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "gothic garden bones thriller"
+    },
+    {
+      "id": "meteor-alley",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 12,
+      "episodes": 0,
+      "titles": {
+        "ko": "유성 골목",
+        "en": "Meteor Alley",
+        "ja": "流星路地",
+        "zh-Hans": "流星巷",
+        "es": "Callejón Meteoro"
+      },
+      "logline": {
+        "ko": "떨어지는 별을 쫓는 소년 갱단.",
+        "en": "A gang of kids chasing falling stars."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "kids rooftop meteor shower action"
+    },
+    {
+      "id": "cloud-architect",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 190,
+      "episodes": 0,
+      "titles": {
+        "ko": "구름 건축가",
+        "en": "Cloud Architect",
+        "ja": "雲の建築家",
+        "zh-Hans": "云朵建筑师",
+        "es": "Arquitecto de Nubes"
+      },
+      "logline": {
+        "ko": "하늘에 집을 짓는 소녀의 설계도.",
+        "en": "Blueprints for houses built in the sky."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "girl building cloud castles"
+    },
+    {
+      "id": "echo-chamber",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 252,
+      "episodes": 0,
+      "titles": {
+        "ko": "메아리 방",
+        "en": "Echo Chamber",
+        "ja": "反響室",
+        "zh-Hans": "回音室",
+        "es": "Cámara de Eco"
+      },
+      "logline": {
+        "ko": "말이 물리적으로 되돌아오는 방.",
+        "en": "A room where spoken words physically return."
+      },
+      "tags": [
+        "mystery",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "sound waves room mystery"
+    },
+    {
+      "id": "prism-runner",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 290,
+      "episodes": 0,
+      "titles": {
+        "ko": "프리즘 러너",
+        "en": "Prism Runner",
+        "ja": "プリズムランナー",
+        "zh-Hans": "棱镜跑者",
+        "es": "Corredor Prisma"
+      },
+      "logline": {
+        "ko": "빛을 밟고 달리는 도시의 배달부.",
+        "en": "A courier who runs on beams of light."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "parkour light beams city"
+    },
+    {
+      "id": "cedar-ghost",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 125,
+      "episodes": 0,
+      "titles": {
+        "ko": "삼나무 유령",
+        "en": "Cedar Ghost",
+        "ja": "杉の幽霊",
+        "zh-Hans": "雪松幽灵",
+        "es": "Fantasma del Cedro"
+      },
+      "logline": {
+        "ko": "숲에서 돌아온 형의 목소리.",
+        "en": "A brother's voice returning from the forest."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "cedar forest fog drama"
+    },
+    {
+      "id": "opal-scar",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 185,
+      "episodes": 0,
+      "titles": {
+        "ko": "오팔의 흉터",
+        "en": "Opal Scar",
+        "ja": "オパールの傷",
+        "zh-Hans": "欧泊伤疤",
+        "es": "Cicatriz de Ópalo"
+      },
+      "logline": {
+        "ko": "보석 속에 갇힌 범인의 얼굴.",
+        "en": "A criminal's face trapped inside a gemstone."
+      },
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "gemstone macro face thriller"
+    },
+    {
+      "id": "sugar-orbit",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 305,
+      "episodes": 0,
+      "titles": {
+        "ko": "슈가 궤도",
+        "en": "Sugar Orbit",
+        "ja": "シューガー軌道",
+        "zh-Hans": "糖轨",
+        "es": "Órbita Azucarada"
+      },
+      "logline": {
+        "ko": "사탕 행성을 도는 두 우주인의 데이트.",
+        "en": "A date orbiting a planet made of candy."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "candy planet couple space romance"
+    },
+    {
+      "id": "titan-letters",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 178,
+      "episodes": 0,
+      "titles": {
+        "ko": "타이탄 서신",
+        "en": "Titan Letters",
+        "ja": "タイタンの手紙",
+        "zh-Hans": "泰坦来信",
+        "es": "Cartas de Titán"
+      },
+      "logline": {
+        "ko": "흙의 위성에서 온 80년 늦은 편지.",
+        "en": "Letters from Titan, delivered eighty years late."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "titan moon methane lakes sci-fi"
+    },
+    {
+      "id": "moss-cathedral",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 135,
+      "episodes": 0,
+      "titles": {
+        "ko": "이끼 대성당",
+        "en": "Moss Cathedral",
+        "ja": "苔の大聖堂",
+        "zh-Hans": "苔藓大教堂",
+        "es": "Catedral de Musgo"
+      },
+      "logline": {
+        "ko": "숲이 예배당이 된 뒤의 기도.",
+        "en": "Prayers after the forest became a cathedral."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "moss cathedral forest fantasy"
+    },
+    {
+      "id": "neon-rosary",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 295,
+      "episodes": 0,
+      "titles": {
+        "ko": "네온 묵주",
+        "en": "Neon Rosary",
+        "ja": "ネオンのロザリオ",
+        "zh-Hans": "霓虹玫瑰经",
+        "es": "Rosario de Neón"
+      },
+      "logline": {
+        "ko": "사이버 성당에서의 고백.",
+        "en": "Confession in a cybernetic cathedral."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "neon church cyber drama"
+    },
+    {
+      "id": "ash-piano",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 0,
+      "episodes": 0,
+      "titles": {
+        "ko": "잿빛 피아노",
+        "en": "Ash Piano",
+        "ja": "灰のピアノ",
+        "zh-Hans": "灰烬钢琴",
+        "es": "Piano de Ceniza"
+      },
+      "logline": {
+        "ko": "화재 이후 남은 건반의 기억.",
+        "en": "Memories trapped in keys after the fire."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "burnt piano embers drama"
+    },
+    {
+      "id": "wolf-hour",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 215,
+      "episodes": 0,
+      "titles": {
+        "ko": "늑대의 시간",
+        "en": "Wolf Hour",
+        "ja": "狼の時間",
+        "zh-Hans": "狼之时",
+        "es": "Hora del Lobo"
+      },
+      "logline": {
+        "ko": "새벽 4시, 모든 거짓말이 통하는 시각.",
+        "en": "At 4 a.m., every lie becomes believable."
+      },
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "wolf silhouette clock thriller"
+    },
+    {
+      "id": "pixel-garden",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 110,
+      "episodes": 0,
+      "titles": {
+        "ko": "픽셀 정원",
+        "en": "Pixel Garden",
+        "ja": "ピクセル庭園",
+        "zh-Hans": "像素花园",
+        "es": "Jardín Pixel"
+      },
+      "logline": {
+        "ko": "8비트 꽃이 자라는 현실의 틈.",
+        "en": "A crack in reality where 8-bit flowers grow."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "pixel flowers real world fantasy"
+    },
+    {
+      "id": "aurora-debt",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 165,
+      "episodes": 0,
+      "titles": {
+        "ko": "오로라 부채",
+        "en": "Aurora Debt",
+        "ja": "オーロラの負債",
+        "zh-Hans": "极光债务",
+        "es": "Deuda de Aurora"
+      },
+      "logline": {
+        "ko": "빛을 빌려주는 자의 계약서.",
+        "en": "A contract with one who lends the northern lights."
+      },
+      "tags": [
+        "mystery",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "aurora borealis contract mystery"
+    },
+    {
+      "id": "cinder-knight",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 20,
+      "episodes": 0,
+      "titles": {
+        "ko": "잔화 기사",
+        "en": "Cinder Knight",
+        "ja": "残火の騎士",
+        "zh-Hans": "余烬骑士",
+        "es": "Caballero de Brasas"
+      },
+      "logline": {
+        "ko": "불꽃이 식기 전에 적을 베는 자.",
+        "en": "Strike the foe before the embers die."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "knight flame sword action"
+    },
+    {
+      "id": "tideglass",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 188,
+      "episodes": 0,
+      "titles": {
+        "ko": "조수 유리",
+        "en": "Tideglass",
+        "ja": "潮glass",
+        "zh-Hans": "潮汐玻璃",
+        "es": "Vidrio de Marea"
+      },
+      "logline": {
+        "ko": "밀물에만 보이는 유리섬의 연인.",
+        "en": "Lovers on a glass isle visible only at high tide."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "glass island ocean romance"
+    },
+    {
+      "id": "rootbound",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 100,
+      "episodes": 0,
+      "titles": {
+        "ko": "뿌리 결속",
+        "en": "Rootbound",
+        "ja": "根に縛られて",
+        "zh-Hans": "根缚",
+        "es": "Atado a la Raíz"
+      },
+      "logline": {
+        "ko": "나무와 감정이 연결된 마을.",
+        "en": "A village where trees share human emotions."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "tree roots village fantasy"
+    },
+    {
+      "id": "satellite-rain",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 202,
+      "episodes": 0,
+      "titles": {
+        "ko": "위성 비",
+        "en": "Satellite Rain",
+        "ja": "衛星の雨",
+        "zh-Hans": "卫星之雨",
+        "es": "Lluvia de Satélites"
+      },
+      "logline": {
+        "ko": "하늘에서 떨어지는 고장 난 인공위성.",
+        "en": "Broken satellites raining from the sky."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "satellites falling sky sci-fi"
+    },
+    {
+      "id": "chalk-revolution",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 48,
+      "episodes": 0,
+      "titles": {
+        "ko": "분필 혁명",
+        "en": "Chalk Revolution",
+        "ja": "チョーク革命",
+        "zh-Hans": "粉笔革命",
+        "es": "Revolución de Tiza"
+      },
+      "logline": {
+        "ko": "칠판에 쓴 꿈이 거리를 점령할 때.",
+        "en": "When dreams on the chalkboard occupy the streets."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "classroom chalk protest drama"
+    },
+    {
+      "id": "ivory-labyrinth",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 40,
+      "episodes": 0,
+      "titles": {
+        "ko": "상아 미궁",
+        "en": "Ivory Labyrinth",
+        "ja": "象牙の迷宮",
+        "zh-Hans": "象牙迷宫",
+        "es": "Laberinto de Marfil"
+      },
+      "logline": {
+        "ko": "피아노 건반처럼 배열된 살인 미로.",
+        "en": "A murder maze laid like piano keys."
+      },
+      "tags": [
+        "mystery",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "ivory maze mystery corridors"
+    },
+    {
+      "id": "storm-telegram",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 230,
+      "episodes": 0,
+      "titles": {
+        "ko": "폭풍 전보",
+        "en": "Storm Telegram",
+        "ja": "嵐の電報",
+        "zh-Hans": "风暴电报",
+        "es": "Telegrama de Tormenta"
+      },
+      "logline": {
+        "ko": "번개마다 도착하는 살인 예고.",
+        "en": "Murder warnings that arrive with each lightning bolt."
+      },
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "storm lighthouse telegram thriller"
+    },
+    {
+      "id": "halo-market",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 55,
+      "episodes": 0,
+      "titles": {
+        "ko": "후광 시장",
+        "en": "Halo Market",
+        "ja": "後光の市場",
+        "zh-Hans": "光环集市",
+        "es": "Mercado del Halo"
+      },
+      "logline": {
+        "ko": "천사의 잃어버린 후광을 파는 골목.",
+        "en": "An alley market selling lost angel halos."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "fantasy market glowing halos"
+    },
+    {
+      "id": "rust-symphony",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 16,
+      "episodes": 0,
+      "titles": {
+        "ko": "녹슨 교향곡",
+        "en": "Rust Symphony",
+        "ja": "錆の交響曲",
+        "zh-Hans": "铁锈交响曲",
+        "es": "Sinfonía de Óxido"
+      },
+      "logline": {
+        "ko": "폐공장의 기계들이 다시 울릴 때.",
+        "en": "When the machines of a dead factory play again."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "rust factory robots action"
+    },
+    {
+      "id": "pearl-diver",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 186,
+      "episodes": 0,
+      "titles": {
+        "ko": "진주 잠수사",
+        "en": "Pearl Diver",
+        "ja": "真珠の潜水夫",
+        "zh-Hans": "采珠人",
+        "es": "Buzo de Perlas"
+      },
+      "logline": {
+        "ko": "심해에서 찾은 것은 진주가 아니었다.",
+        "en": "What she found in the deep was not a pearl."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "pearl diver underwater romance"
+    },
+    {
+      "id": "ghost-frequency",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 240,
+      "episodes": 0,
+      "titles": {
+        "ko": "유령 주파수",
+        "en": "Ghost Frequency",
+        "ja": "幽霊周波数",
+        "zh-Hans": "幽灵频率",
+        "es": "Frecuencia Fantasma"
+      },
+      "logline": {
+        "ko": "죽은 방송국의 신호가 다시 잡히다.",
+        "en": "A dead station's signal comes back on air."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "radio tower ghost signal sci-fi"
+    },
+    {
+      "id": "saffron-gate",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 35,
+      "episodes": 0,
+      "titles": {
+        "ko": "샤프란 문",
+        "en": "Saffron Gate",
+        "ja": "サフランの門",
+        "zh-Hans": "藏红花之门",
+        "es": "Puerta de Azafrán"
+      },
+      "logline": {
+        "ko": "향신료로 그려진 차원의 문.",
+        "en": "A dimensional gate drawn with spices."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "spice gate portal fantasy"
+    },
+    {
+      "id": "midnight-express",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 250,
+      "episodes": 0,
+      "titles": {
+        "ko": "미드나잇 익스프레스",
+        "en": "Midnight Express",
+        "ja": "ミッドナイト急行",
+        "zh-Hans": "午夜快车",
+        "es": "Expreso de Medianoche"
+      },
+      "logline": {
+        "ko": "종착역이 없는 자정 열차의 승객.",
+        "en": "Passengers on a midnight train with no terminus."
+      },
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "midnight train thriller fog"
+    },
+    {
+      "id": "canvas-revolt",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 285,
+      "episodes": 0,
+      "titles": {
+        "ko": "캔버스 반란",
+        "en": "Canvas Revolt",
+        "ja": "キャンバスの反乱",
+        "zh-Hans": "画布反叛",
+        "es": "Revuelta del Lienzo"
+      },
+      "logline": {
+        "ko": "그림 속 인물이罷工하는 날.",
+        "en": "The day figures in paintings go on strike."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "painted figures stepping out drama"
+    },
+    {
+      "id": "zenith-blade",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 5,
+      "episodes": 0,
+      "titles": {
+        "ko": "천정의 검",
+        "en": "Zenith Blade",
+        "ja": "天頂の剣",
+        "zh-Hans": "天顶之剑",
+        "es": "Espada del Cenit"
+      },
+      "logline": {
+        "ko": "정오의 태양을 베는 검술.",
+        "en": "A sword style that cuts the noon sun."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "swordsman sun zenith action"
+    },
+    {
+      "id": "lotus-circuit",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 158,
+      "episodes": 0,
+      "titles": {
+        "ko": "연꽃 회로",
+        "en": "Lotus Circuit",
+        "ja": "蓮の回路",
+        "zh-Hans": "莲花回路",
+        "es": "Circuito de Loto"
+      },
+      "logline": {
+        "ko": "연못 아래 숨은 양자 서버.",
+        "en": "A quantum server hidden beneath the lotus pond."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "lotus pond cyber circuits"
+    },
+    {
+      "id": "fable-warehouse",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 72,
+      "episodes": 0,
+      "titles": {
+        "ko": "우화 창고",
+        "en": "Fable Warehouse",
+        "ja": "寓話の倉庫",
+        "zh-Hans": "寓言仓库",
+        "es": "Almacén de Fábulas"
+      },
+      "logline": {
+        "ko": "잊힌 동화가 박스에 포장되어 있다.",
+        "en": "Forgotten fables packed in dusty boxes."
+      },
+      "tags": [
+        "mystery",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "warehouse fairy tales boxes"
+    },
+    {
+      "id": "ether-bride",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 298,
+      "episodes": 0,
+      "titles": {
+        "ko": "에테르 신부",
+        "en": "Ether Bride",
+        "ja": "エーテルの花嫁",
+        "zh-Hans": "以太新娘",
+        "es": "Novia del Éter"
+      },
+      "logline": {
+        "ko": "눈에 보이지 않는 약혼자의 초대장.",
+        "en": "An invitation from an invisible fiancé."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "ethereal bride veil romance"
+    },
+    {
+      "id": "basalt-song",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 25,
+      "episodes": 0,
+      "titles": {
+        "ko": "현무암 노래",
+        "en": "Basalt Song",
+        "ja": "玄武岩の歌",
+        "zh-Hans": "玄武岩之歌",
+        "es": "Canción de Basalto"
+      },
+      "logline": {
+        "ko": "화산 섬에서 이어지는 세대의 합창.",
+        "en": "Generations singing on a volcanic isle."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "volcanic island choir drama"
+    },
+    {
+      "id": "cobalt-mirage",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 210,
+      "episodes": 0,
+      "titles": {
+        "ko": "코발트 신기루",
+        "en": "Cobalt Mirage",
+        "ja": "コバルトの蜃気楼",
+        "zh-Hans": "钴蓝海市蜃楼",
+        "es": "Espejismo de Cobalto"
+      },
+      "logline": {
+        "ko": "사막에 비친 도시는 실종된 고향.",
+        "en": "A city reflected in the desert is a vanished hometown."
+      },
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "desert mirage city thriller"
+    },
+    {
+      "id": "dawn-protocol",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 32,
+      "episodes": 0,
+      "titles": {
+        "ko": "새벽 프로토콜",
+        "en": "Dawn Protocol",
+        "ja": "夜明けプロトコル",
+        "zh-Hans": "黎明协议",
+        "es": "Protocolo del Alba"
+      },
+      "logline": {
+        "ko": "해가 뜨면 초기화되는 인공의식.",
+        "en": "An artificial mind reset at every sunrise."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "sunrise AI reset sci-fi"
+    },
+    {
+      "id": "whisper-factory",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 265,
+      "episodes": 0,
+      "titles": {
+        "ko": "속삭임 공장",
+        "en": "Whisper Factory",
+        "ja": "囁きの工場",
+        "zh-Hans": "低语工厂",
+        "es": "Fábrica de Susurros"
+      },
+      "logline": {
+        "ko": "비밀을 대량 생산하는 산업 단지.",
+        "en": "An industrial zone that mass-produces secrets."
+      },
+      "tags": [
+        "mystery",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "factory whispers smoke mystery"
+    },
+    {
+      "id": "jade-rebellion",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 140,
+      "episodes": 0,
+      "titles": {
+        "ko": "비취 반란",
+        "en": "Jade Rebellion",
+        "ja": "翡翠の反乱",
+        "zh-Hans": "翡翠叛乱",
+        "es": "Rebelión de Jade"
+      },
+      "logline": {
+        "ko": "고대 인형 군단의 각성.",
+        "en": "Awakening of an ancient jade army."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "jade warriors awakening action"
+    },
+    {
+      "id": "snow-telegram",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 200,
+      "episodes": 0,
+      "titles": {
+        "ko": "눈송이 전보",
+        "en": "Snow Telegram",
+        "ja": "雪の電報",
+        "zh-Hans": "雪花电报",
+        "es": "Telegrama de Nieve"
+      },
+      "logline": {
+        "ko": "눈이 내릴 때마다 오는 고백.",
+        "en": "A confession delivered whenever it snows."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "snow town telegram romance"
+    },
+    {
+      "id": "amber-catacomb",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 30,
+      "episodes": 0,
+      "titles": {
+        "ko": "호박 지하묘",
+        "en": "Amber Catacomb",
+        "ja": "琥珀の地下廟",
+        "zh-Hans": "琥珀地下陵",
+        "es": "Catacumba de Ámbar"
+      },
+      "logline": {
+        "ko": "호박에 봉인된 왕들의 속삭임.",
+        "en": "Kings whispering from inside amber tombs."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "amber tomb fantasy underground"
+    },
+    {
+      "id": "ripple-jury",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 195,
+      "episodes": 0,
+      "titles": {
+        "ko": "파문 배심원",
+        "en": "Ripple Jury",
+        "ja": "波紋の陪審",
+        "zh-Hans": "涟漪陪审团",
+        "es": "Jurado de Ondas"
+      },
+      "logline": {
+        "ko": "호수가 내린 유죄 판결.",
+        "en": "A guilty verdict delivered by the lake itself."
+      },
+      "tags": [
+        "drama",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "lake courtroom drama"
+    },
+    {
+      "id": "voltage-bloom",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 65,
+      "episodes": 0,
+      "titles": {
+        "ko": "볼트 개화",
+        "en": "Voltage Bloom",
+        "ja": "ボルトの開花",
+        "zh-Hans": "伏特花开",
+        "es": "Flor de Voltaje"
+      },
+      "logline": {
+        "ko": "전기로 피어나는 거리의 꽃.",
+        "en": "Flowers blooming from urban electric surges."
+      },
+      "tags": [
+        "action",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "electric flowers city action"
+    },
+    {
+      "id": "lumen-archive",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 54,
+      "episodes": 0,
+      "titles": {
+        "ko": "루멘 기록관",
+        "en": "Lumen Archive",
+        "ja": "ルーメン記録館",
+        "zh-Hans": "流明档案馆",
+        "es": "Archivo Lumen"
+      },
+      "logline": {
+        "ko": "빛의 속도로 저장된 기억 도서관.",
+        "en": "A library storing memories at light speed."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "light archive sci-fi library"
+    },
+    {
+      "id": "silk-storm",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "featured": false,
+      "hue": 340,
+      "episodes": 0,
+      "titles": {
+        "ko": "비단 폭풍",
+        "en": "Silk Storm",
+        "ja": "絹の嵐",
+        "zh-Hans": "丝绸风暴",
+        "es": "Tormenta de Seda"
+      },
+      "logline": {
+        "ko": "실크가 거리를 삼킨 날의 추적.",
+        "en": "Tracking the day silk devoured the streets."
+      },
+      "tags": [
+        "thriller",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "silk storm city thriller"
+    },
+    {
+      "id": "orbit-bakery",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "all",
+      "interactive": true,
+      "featured": false,
+      "hue": 28,
+      "episodes": 0,
+      "titles": {
+        "ko": "궤도 베이커리",
+        "en": "Orbit Bakery",
+        "ja": "軌道ベーカリー",
+        "zh-Hans": "轨道面包房",
+        "es": "Panadería Orbital"
+      },
+      "logline": {
+        "ko": "우주 정거장에서 굽는 첫 웨딩 케이크.",
+        "en": "The first wedding cake baked on a space station."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "space station bakery romance"
+    },
+    {
+      "id": "rune-hospital",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "15",
+      "interactive": true,
+      "featured": false,
+      "hue": 170,
+      "episodes": 0,
+      "titles": {
+        "ko": "룬 병원",
+        "en": "Rune Hospital",
+        "ja": "ルーン病院",
+        "zh-Hans": "符文医院",
+        "es": "Hospital de Runas"
+      },
+      "logline": {
+        "ko": "마법 부호로 수술하는 밤의 응급실.",
+        "en": "An ER that operates with magical runes."
+      },
+      "tags": [
+        "fantasy",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "rune hospital fantasy night"
+    },
+    {
+      "id": "cinder-bloom",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "12",
+      "interactive": true,
+      "featured": false,
+      "hue": 350,
+      "episodes": 0,
+      "titles": {
+        "ko": "잔불 꽃다발",
+        "en": "Cinder Bloom Bouquet",
+        "ja": "残火の花束",
+        "zh-Hans": "余烬花束",
+        "es": "Ramo de Brasas"
+      },
+      "logline": {
+        "ko": "타버린 꽃집에서 다시 피는 약속.",
+        "en": "A promise reblooming from a burnt flower shop."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": [],
+      "posterScene": "burnt flower shop romance rebloom"
     }
   ]
 }
