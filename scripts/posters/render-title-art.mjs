@@ -18,7 +18,7 @@ for (const loc of LOCALES) mkdirSync(path.join(outRoot, loc), { recursive: true 
 
 const jobs = [];
 for (const title of catalog.titles) {
-  const style = styleForTitle(title.id);
+  const style = styleForTitle(title);
   for (const locale of LOCALES) {
     const out = path.join(outRoot, locale, `${title.id}.png`);
     if (!force && existsSync(out)) continue;
