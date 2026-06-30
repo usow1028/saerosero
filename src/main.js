@@ -2,6 +2,7 @@ import { startRouter, navigate as nav, route } from './router.js';
 import { getSettings, applyTheme, patchSettings } from './services/SettingsService.js';
 import { setLocale } from './i18n/index.js';
 import { createNav } from './ui/Nav.js';
+import { createBrandLogo } from './ui/BrandLogo.js';
 import { el } from './ui/helpers.js';
 import { renderHome } from './pages/home.js';
 import { renderBrowse } from './pages/browse.js';
@@ -32,10 +33,7 @@ function init() {
 function showSplash(done) {
   const splash = el('div', { class: 'splash' });
   splash.append(el('div', { class: 'splash-inner' }, [
-    el('div', { class: 'logo' }, [
-      el('span', { class: 'logo-saero', text: 'Saero' }),
-      el('span', { class: 'logo-sero', text: 'Sero' }),
-    ]),
+    createBrandLogo({ className: 'logo logo--splash' }),
     el('p', { class: 'splash-tagline', text: t('brand.tagline') }),
   ]));
   const end = () => { splash.remove(); done(); };

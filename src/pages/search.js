@@ -1,27 +1,33 @@
-import { loadCatalog, searchTitles, titleName, filterTitles } from '../services/CatalogService.js';
+import { loadCatalog, searchTitles, filterTitles } from '../services/CatalogService.js';
 import { sortByRecommendation } from '../services/RecommendationService.js';
 import { getLocale, t } from '../i18n/index.js';
 import { createTitleCard } from '../ui/TitleCard.js';
+import { icon } from '../ui/icons.js';
 import { el } from '../ui/helpers.js';
 
 export async function renderSearch(container, navigate, query = '') {
   const catalog = await loadCatalog();
   const locale = getLocale();
+
+  const field = el('div', { class: 'search-field' });
+  field.append(icon('search', 'icon search-field-icon'));
   const input = el('input', {
     type: 'search',
+    class: 'search-input',
     placeholder: t('search.placeholder'),
     value: query,
-    style: 'width:100%;max-width:480px;padding:0.75rem 1rem;border-radius:12px;border:1px solid var(--border);background:var(--bg-elevated);margin:1rem;',
   });
+  field.append(input);
+
   const grid = el('div', { class: 'search-grid' });
 
   function run(q) {
     let items = q ? searchTitles(catalog, q, locale) : [];
     if (!items.length && q) {
-      grid.replaceChildren(el('p', { text: t('search.empty'), style: 'padding:1rem;' }));
+      grid.replaceChildren(el('p', { class: 'search-empty', text: t('search.empty') }));
       const suggest = el('section', { class: 'row-section' });
-      suggest.append(el('h3', { text: t('search.suggest'), style: 'padding:0 1rem;' }));
-      const track = el('div', { class: 'row-track' });
+      suggest.append(el('h3', { class: 'search-suggest-title', text: t('search.suggest') }));
+      const track = el('div', { class: 'search-grid' });
       sortByRecommendation(filterTitles(catalog, {}), locale).slice(0, 8).forEach((item) => {
         track.append(createTitleCard(item, { onClick: () => navigate(`/title/${item.id}`) }));
       });
@@ -34,6 +40,9 @@ export async function renderSearch(container, navigate, query = '') {
   }
 
   input.oninput = () => run(input.value);
-  container.replaceChildren(el('div', { style: 'padding:0 1.5rem;' }, [input]), grid);
+  container.replaceChildren(
+    el('div', { class: 'page-header' }, [el('h1', { text: t('nav.search') }), field]),
+    grid,
+  );
   run(query);
 }

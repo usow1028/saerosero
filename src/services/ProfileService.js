@@ -1,7 +1,11 @@
 import { readJson, writeJson } from './storage.js';
 
 const KEY = 'profiles';
-const AVATARS = ['🌙', '⭐', '🌊', '🎬', '🪐', '✨', '🦋', '🎭', '🌸', '🔮', '🎐', '🌌'];
+
+function initialFromName(name) {
+  const t = name.trim();
+  return t ? t[0].toUpperCase() : 'G';
+}
 
 export function listProfiles() {
   return readJson(KEY, []);
@@ -13,10 +17,12 @@ export function saveProfiles(profiles) {
 
 export function createProfile(name) {
   const profiles = listProfiles();
+  const hue = (profiles.length * 47 + 160) % 360;
   const profile = {
     id: crypto.randomUUID(),
     name: name.trim() || 'Guest',
-    avatar: AVATARS[profiles.length % AVATARS.length],
+    initial: initialFromName(name),
+    hue,
     createdAt: Date.now(),
     taste: { genres: {}, branches: {} },
   };
@@ -41,5 +47,3 @@ export function getActiveProfile() {
 export function isGuestMode() {
   return !getActiveProfileId();
 }
-
-export { AVATARS };

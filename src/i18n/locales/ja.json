@@ -1,6 +1,6 @@
 {
   "meta": { "label": "日本語" },
-  "brand": { "tagline": "物語の道をつなぐ" },
+  "brand": { "part1": "セロ", "part2": "セロ", "tagline": "物語の道をつなぐ" },
   "nav": { "home": "ホーム", "browse": "ブラウズ", "search": "検索", "mylist": "マイリスト" },
   "home": { "continue": "続きから", "interactive": "インタラクティブ", "trending": "人気作品", "new": "新着 & Coming Soon", "mylist": "マイリスト" },
   "genre": { "sf": "SF", "fantasy": "ファンタジー", "romance": "ロマンス", "thriller": "スリラー", "drama": "ドラマ", "mystery": "ミステリー", "action": "アクション" },

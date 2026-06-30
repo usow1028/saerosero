@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 510" width="340" height="510">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="hsl(3 42% 16%)"/>
+      <stop offset="55%" stop-color="hsl(43 48% 28%)"/>
+      <stop offset="100%" stop-color="hsl(3 35% 12%)"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="35%" r="55%">
+      <stop offset="0%" stop-color="hsla(3,70%,60%,0.35)"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  <rect width="340" height="510" fill="url(#bg)"/>
+  <rect width="340" height="510" fill="url(#glow)"/>
+  <rect x="90" y="100" width="160" height="120" rx="4" fill="hsla(3,35%,25%,0.4)"/><line x1="110" y1="140" x2="230" y2="140" stroke="hsla(3,50%,60%,0.3)" stroke-width="2"/>
+  <circle cx="144" cy="344" r="16" fill="hsla(43,60%,70%,0.25)"/>
+  <text x="24" y="470" fill="hsla(3,20%,92%,0.55)" font-family="Outfit, sans-serif" font-size="14" font-weight="500">인터루드 39</text>
+</svg>

@@ -1,6 +1,6 @@
 {
   "meta": { "label": "English" },
-  "brand": { "tagline": "Continue the path of your story" },
+  "brand": { "part1": "Saero", "part2": "Sero", "tagline": "Continue the path of your story" },
   "nav": { "home": "Home", "browse": "Browse", "search": "Search", "mylist": "My List" },
   "home": {
     "continue": "Continue Watching",

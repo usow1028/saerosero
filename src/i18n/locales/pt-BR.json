@@ -1,6 +1,6 @@
 {
   "meta": { "label": "Português (BR)" },
-  "brand": { "tagline": "Continue o caminho da sua história" },
+  "brand": { "part1": "Saero", "part2": "Sero", "tagline": "Continue o caminho da sua história" },
   "nav": { "home": "Início", "browse": "Navegar", "search": "Buscar", "mylist": "Minha lista" },
   "home": { "continue": "Continuar", "interactive": "Interativos", "trending": "Em alta", "new": "Novo & Em breve", "mylist": "Minha lista" },
   "genre": { "sf": "Ficção científica", "fantasy": "Fantasia", "romance": "Romance", "thriller": "Suspense", "drama": "Drama", "mystery": "Mistério", "action": "Ação" },

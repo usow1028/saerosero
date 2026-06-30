@@ -1,6 +1,7 @@
 import { loadCatalog, filterTitles, titleName } from '../services/CatalogService.js';
 import { getLocale, t } from '../i18n/index.js';
 import { createTitleCard } from '../ui/TitleCard.js';
+import { wrapScrollRow } from '../ui/ScrollRow.js';
 import { el } from '../ui/helpers.js';
 
 export async function renderBrowse(container, navigate) {
@@ -8,7 +9,7 @@ export async function renderBrowse(container, navigate) {
   const locale = getLocale();
   let filters = { genre: '', age: '', status: '' };
 
-  const grid = el('div', { class: 'search-grid' });
+  const track = el('div', { class: 'row-track' });
 
   function refresh() {
     let items = filterTitles(catalog, {
@@ -17,7 +18,7 @@ export async function renderBrowse(container, navigate) {
       status: filters.status || undefined,
     });
     if (filters.sort === 'title') items.sort((a, b) => titleName(a, locale).localeCompare(titleName(b, locale)));
-    grid.replaceChildren(...items.map((item) => createTitleCard(item, { onClick: () => navigate(`/title/${item.id}`) })));
+    track.replaceChildren(...items.map((item) => createTitleCard(item, { onClick: () => navigate(`/title/${item.id}`) })));
   }
 
   const bar = el('div', { class: 'browse-bar' }, [
@@ -33,7 +34,7 @@ export async function renderBrowse(container, navigate) {
     mkSelect(t('browse.sort'), [['rec', t('browse.sortRec')], ['title', t('browse.sortTitle')]], (v) => { filters.sort = v; refresh(); }),
   ]);
 
-  container.replaceChildren(bar, grid);
+  container.replaceChildren(bar, wrapScrollRow(track));
   refresh();
 }
 

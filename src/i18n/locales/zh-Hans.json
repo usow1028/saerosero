@@ -1,6 +1,6 @@
 {
   "meta": { "label": "简体中文" },
-  "brand": { "tagline": "延续你的故事之路" },
+  "brand": { "part1": "新罗", "part2": "世罗", "tagline": "延续你的故事之路" },
   "nav": { "home": "首页", "browse": "浏览", "search": "搜索", "mylist": "我的列表" },
   "home": { "continue": "继续观看", "interactive": "互动精选", "trending": "热门", "new": "新作 & 即将上线", "mylist": "我的列表" },
   "genre": { "sf": "科幻", "fantasy": "奇幻", "romance": "爱情", "thriller": "惊悚", "drama": "剧情", "mystery": "悬疑", "action": "动作" },

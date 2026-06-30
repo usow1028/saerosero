@@ -8,6 +8,8 @@
     "build": "vite build",
     "preview": "vite preview",
     "seed:catalog": "node scripts/seed-catalog.mjs",
+    "seed:posters": "node scripts/generate-posters.mjs",
+    "seed": "npm run seed:catalog && npm run seed:posters",
     "test": "vitest run"
   },
   "devDependencies": {

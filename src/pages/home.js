@@ -2,6 +2,9 @@ import { loadCatalog, titleName } from '../services/CatalogService.js';
 import { buildHomeRows } from '../services/RecommendationService.js';
 import { getLocale, t } from '../i18n/index.js';
 import { createTitleCard } from '../ui/TitleCard.js';
+import { wrapScrollRow } from '../ui/ScrollRow.js';
+import { playButton, infoButton } from '../ui/actions.js';
+import { posterUrl } from '../ui/poster.js';
 import { el } from '../ui/helpers.js';
 
 export async function renderHome(container, navigate) {
@@ -14,20 +17,17 @@ export async function renderHome(container, navigate) {
 
   if (heroTitle) {
     const hero = el('section', { class: 'hero' });
-    const bg = el('div', { class: 'hero-bg' });
-    if (heroTitle.id === 'starlight-station') {
-      bg.style.backgroundImage = 'url(/assets/posters/starlight-station.jpg)';
-    } else {
-      bg.style.background = `linear-gradient(135deg, hsl(${heroTitle.hue} 40% 18%), hsl(${heroTitle.hue} 50% 32%))`;
-    }
-    hero.append(bg, el('div', { class: 'hero-overlay' }));
+    const media = el('div', { class: 'hero-media' });
+    const img = el('img', { class: 'hero-img', src: posterUrl(heroTitle.id), alt: '' });
+    media.append(img);
+    hero.append(media, el('div', { class: 'hero-overlay' }));
     hero.append(el('div', { class: 'hero-content' }, [
-      el('span', { class: 'chip', text: t(`genre.${heroTitle.genre}`) }),
+      el('span', { class: 'chip chip-hero', text: t(`genre.${heroTitle.genre}`) }),
       el('h1', { text: titleName(heroTitle, locale) }),
       el('p', { text: heroTitle.logline?.[locale] ?? heroTitle.logline?.en ?? '' }),
       el('div', { class: 'hero-actions' }, [
-        el('button', { class: 'btn btn-primary', text: `▶ ${t('actions.play')}`, onclick: () => navigate(`/watch/${heroTitle.id}/1`) }),
-        el('button', { class: 'btn', text: t('actions.info'), onclick: () => navigate(`/title/${heroTitle.id}`) }),
+        playButton(t('actions.play'), () => navigate(`/watch/${heroTitle.id}/1`)),
+        infoButton(t('actions.info'), () => navigate(`/title/${heroTitle.id}`)),
       ]),
     ]));
     container.append(hero);
@@ -42,7 +42,7 @@ export async function renderHome(container, navigate) {
     for (const item of row.items) {
       track.append(createTitleCard(item, { onClick: () => navigate(`/title/${item.id}`) }));
     }
-    section.append(track);
+    section.append(wrapScrollRow(track));
     container.append(section);
   }
 }
