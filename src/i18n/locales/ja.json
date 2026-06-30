@@ -1,0 +1,16 @@
+{
+  "meta": { "label": "日本語" },
+  "brand": { "tagline": "物語の道をつなぐ" },
+  "nav": { "home": "ホーム", "browse": "ブラウズ", "search": "検索", "mylist": "マイリスト" },
+  "home": { "continue": "続きから", "interactive": "インタラクティブ", "trending": "人気作品", "new": "新着 & Coming Soon", "mylist": "マイリスト" },
+  "genre": { "sf": "SF", "fantasy": "ファンタジー", "romance": "ロマンス", "thriller": "スリラー", "drama": "ドラマ", "mystery": "ミステリー", "action": "アクション" },
+  "status": { "playable": "再生", "development": "制作中", "coming_soon": "近日公開" },
+  "actions": { "play": "再生", "resume": "続きから", "addList": "マイリスト", "removeList": "解除", "info": "詳細", "notify": "通知", "profiles": "プロフィール", "settings": "設定", "back": "戻る", "skip": "スキップ", "fullscreen": "全画面", "saveRoad": "セーブロード" },
+  "search": { "placeholder": "タイトル、ジャンル、キャラクター…", "empty": "結果なし", "suggest": "おすすめ" },
+  "browse": { "title": "ブラウズ", "filterGenre": "ジャンル", "filterAge": "年齢", "filterStatus": "状態", "sort": "並び替え", "sortRec": "おすすめ", "sortNew": "新着", "sortTitle": "タイトル" },
+  "profile": { "title": "誰が見ますか？", "add": "追加", "guest": "ゲスト" },
+  "gate": { "title": "プロフィールを選択", "body": "ゲストは第1話のプレビューのみ。", "cta": "選択" },
+  "player": { "branch": "ルート", "locked": "分岐ロック", "quality": "画質", "subtitles": "字幕" },
+  "recap": { "title": "ストーリー振り返り", "path": "あなたの経路", "next": "次の話", "home": "ホーム" },
+  "settings": { "theme": "テーマ", "themeLight": "ライト", "themeDark": "ダーク", "language": "言語", "mature": "成人向け", "quality": "画質" }
+}

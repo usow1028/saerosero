@@ -1,0 +1,16 @@
+{
+  "meta": { "label": "简体中文" },
+  "brand": { "tagline": "延续你的故事之路" },
+  "nav": { "home": "首页", "browse": "浏览", "search": "搜索", "mylist": "我的列表" },
+  "home": { "continue": "继续观看", "interactive": "互动精选", "trending": "热门", "new": "新作 & 即将上线", "mylist": "我的列表" },
+  "genre": { "sf": "科幻", "fantasy": "奇幻", "romance": "爱情", "thriller": "惊悚", "drama": "剧情", "mystery": "悬疑", "action": "动作" },
+  "status": { "playable": "立即播放", "development": "制作中", "coming_soon": "即将上线" },
+  "actions": { "play": "播放", "resume": "继续", "addList": "加入列表", "removeList": "移除", "info": "详情", "notify": "通知我", "profiles": "个人资料", "settings": "设置", "back": "返回", "skip": "跳过", "fullscreen": "全屏", "saveRoad": "存档之路" },
+  "search": { "placeholder": "搜索标题、类型、角色…", "empty": "无结果", "suggest": "你可能喜欢" },
+  "browse": { "title": "浏览", "filterGenre": "类型", "filterAge": "年龄", "filterStatus": "状态", "sort": "排序", "sortRec": "推荐", "sortNew": "最新", "sortTitle": "标题" },
+  "profile": { "title": "选择观看者", "add": "添加", "guest": "访客浏览" },
+  "gate": { "title": "请选择个人资料以继续", "body": "访客仅可观看第1集预览。", "cta": "选择资料" },
+  "player": { "branch": "当前路线", "locked": "分支锁定", "quality": "画质", "subtitles": "字幕" },
+  "recap": { "title": "故事总结", "path": "你的路径", "next": "下一集", "home": "返回首页" },
+  "settings": { "theme": "主题", "themeLight": "浅色", "themeDark": "深色", "language": "语言", "mature": "显示成人内容", "quality": "默认画质" }
+}

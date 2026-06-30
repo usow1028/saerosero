@@ -1,0 +1,22 @@
+{
+  "meta": { "label": "English" },
+  "brand": { "tagline": "Continue the path of your story" },
+  "nav": { "home": "Home", "browse": "Browse", "search": "Search", "mylist": "My List" },
+  "home": {
+    "continue": "Continue Watching",
+    "interactive": "Interactive Picks",
+    "trending": "Trending on SaeroSero",
+    "new": "New & Coming Soon",
+    "mylist": "My List"
+  },
+  "genre": { "sf": "Sci-Fi", "fantasy": "Fantasy", "romance": "Romance", "thriller": "Thriller", "drama": "Drama", "mystery": "Mystery", "action": "Action" },
+  "status": { "playable": "Play Now", "development": "In Development", "coming_soon": "Coming Soon" },
+  "actions": { "play": "Play", "resume": "Resume", "addList": "Add to My List", "removeList": "Remove", "info": "Details", "notify": "Notify Me", "profiles": "Profiles", "settings": "Settings", "back": "Back", "skip": "Skip", "fullscreen": "Fullscreen", "saveRoad": "Save Road" },
+  "search": { "placeholder": "Search titles, genres, characters…", "empty": "No results found", "suggest": "You might like" },
+  "browse": { "title": "Browse", "filterGenre": "Genre", "filterAge": "Age", "filterStatus": "Status", "sort": "Sort", "sortRec": "Recommended", "sortNew": "Newest", "sortTitle": "Title" },
+  "profile": { "title": "Who's watching?", "add": "Add Profile", "guest": "Browse as Guest" },
+  "gate": { "title": "Select a profile to continue", "body": "Guests can watch the Episode 1 preview only.", "cta": "Choose Profile" },
+  "player": { "branch": "Current route", "locked": "Branch locked", "quality": "Quality", "subtitles": "Subtitles" },
+  "recap": { "title": "Story Recap", "path": "Your path", "next": "Next episode", "home": "Back to Home" },
+  "settings": { "theme": "Theme", "themeLight": "Light", "themeDark": "Dark", "language": "Language", "mature": "Show mature content", "quality": "Default quality" }
+}

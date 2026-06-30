@@ -1,0 +1,1127 @@
+{
+  "version": 1,
+  "updatedAt": "2026-06-30T18:00:19.215Z",
+  "titles": [
+    {
+      "id": "starlight-station",
+      "status": "playable",
+      "genre": "sf",
+      "age": "12",
+      "interactive": true,
+      "featured": true,
+      "hue": 200,
+      "episodes": 1,
+      "titles": {
+        "ko": "별빛 정거장",
+        "en": "Starlight Station",
+        "ja": "星灯りの駅",
+        "zh-Hans": "星光车站",
+        "es": "Estación Starlight"
+      },
+      "logline": {
+        "ko": "궤도 정거장에서 울리는 신호. 당신의 선택이 밤을 바꾼다.",
+        "en": "A signal echoes through the orbital station. Your choices reshape the night."
+      },
+      "tags": [
+        "sf",
+        "interactive"
+      ],
+      "characters": [
+        "아리아",
+        "Aria"
+      ]
+    },
+    {
+      "id": "moonlit-harbor",
+      "status": "development",
+      "genre": "romance",
+      "age": "12",
+      "interactive": true,
+      "featured": true,
+      "hue": 220,
+      "episodes": 0,
+      "titles": {
+        "ko": "달빛 항구",
+        "en": "Moonlit Harbor",
+        "ja": "月明かりの港",
+        "zh-Hans": "月光港湾",
+        "es": "Puerto Lunar"
+      },
+      "logline": {
+        "ko": "제작 중인 인터랙티브 시리즈.",
+        "en": "Interactive series in development."
+      },
+      "tags": [
+        "romance",
+        "interactive"
+      ],
+      "characters": []
+    },
+    {
+      "id": "quantum-letters",
+      "status": "development",
+      "genre": "mystery",
+      "age": "15",
+      "interactive": true,
+      "featured": true,
+      "hue": 260,
+      "episodes": 0,
+      "titles": {
+        "ko": "양자 우편",
+        "en": "Quantum Letters",
+        "ja": "量子の手紙",
+        "zh-Hans": "量子书信",
+        "es": "Cartas Cuánticas"
+      },
+      "logline": {
+        "ko": "제작 중인 인터랙티브 시리즈.",
+        "en": "Interactive series in development."
+      },
+      "tags": [
+        "mystery",
+        "interactive"
+      ],
+      "characters": []
+    },
+    {
+      "id": "title-001",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "12",
+      "interactive": true,
+      "hue": 37,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 1",
+        "en": "Interlude 1",
+        "ja": "間奏曲 1",
+        "zh-Hans": "插曲 1",
+        "es": "Interludio 1"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-002",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "15",
+      "interactive": true,
+      "hue": 74,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 2",
+        "en": "Interlude 2",
+        "ja": "間奏曲 2",
+        "zh-Hans": "插曲 2",
+        "es": "Interludio 2"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-003",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "hue": 111,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 3",
+        "en": "Interlude 3",
+        "ja": "間奏曲 3",
+        "zh-Hans": "插曲 3",
+        "es": "Interludio 3"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-004",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "all",
+      "interactive": true,
+      "hue": 148,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 4",
+        "en": "Interlude 4",
+        "ja": "間奏曲 4",
+        "zh-Hans": "插曲 4",
+        "es": "Interludio 4"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-005",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "12",
+      "interactive": true,
+      "hue": 185,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 5",
+        "en": "Interlude 5",
+        "ja": "間奏曲 5",
+        "zh-Hans": "插曲 5",
+        "es": "Interludio 5"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-006",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "15",
+      "interactive": true,
+      "hue": 222,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 6",
+        "en": "Interlude 6",
+        "ja": "間奏曲 6",
+        "zh-Hans": "插曲 6",
+        "es": "Interludio 6"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-007",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "19",
+      "interactive": true,
+      "hue": 259,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 7",
+        "en": "Interlude 7",
+        "ja": "間奏曲 7",
+        "zh-Hans": "插曲 7",
+        "es": "Interludio 7"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-008",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "all",
+      "interactive": true,
+      "hue": 296,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 8",
+        "en": "Interlude 8",
+        "ja": "間奏曲 8",
+        "zh-Hans": "插曲 8",
+        "es": "Interludio 8"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-009",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "12",
+      "interactive": true,
+      "hue": 333,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 9",
+        "en": "Interlude 9",
+        "ja": "間奏曲 9",
+        "zh-Hans": "插曲 9",
+        "es": "Interludio 9"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-010",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "15",
+      "interactive": true,
+      "hue": 10,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 10",
+        "en": "Interlude 10",
+        "ja": "間奏曲 10",
+        "zh-Hans": "插曲 10",
+        "es": "Interludio 10"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-011",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "19",
+      "interactive": true,
+      "hue": 47,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 11",
+        "en": "Interlude 11",
+        "ja": "間奏曲 11",
+        "zh-Hans": "插曲 11",
+        "es": "Interludio 11"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-012",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "all",
+      "interactive": true,
+      "hue": 84,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 12",
+        "en": "Interlude 12",
+        "ja": "間奏曲 12",
+        "zh-Hans": "插曲 12",
+        "es": "Interludio 12"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-013",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "12",
+      "interactive": true,
+      "hue": 121,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 13",
+        "en": "Interlude 13",
+        "ja": "間奏曲 13",
+        "zh-Hans": "插曲 13",
+        "es": "Interludio 13"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-014",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "15",
+      "interactive": true,
+      "hue": 158,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 14",
+        "en": "Interlude 14",
+        "ja": "間奏曲 14",
+        "zh-Hans": "插曲 14",
+        "es": "Interludio 14"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-015",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "19",
+      "interactive": true,
+      "hue": 195,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 15",
+        "en": "Interlude 15",
+        "ja": "間奏曲 15",
+        "zh-Hans": "插曲 15",
+        "es": "Interludio 15"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-016",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "all",
+      "interactive": true,
+      "hue": 232,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 16",
+        "en": "Interlude 16",
+        "ja": "間奏曲 16",
+        "zh-Hans": "插曲 16",
+        "es": "Interludio 16"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-017",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "12",
+      "interactive": true,
+      "hue": 269,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 17",
+        "en": "Interlude 17",
+        "ja": "間奏曲 17",
+        "zh-Hans": "插曲 17",
+        "es": "Interludio 17"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-018",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "15",
+      "interactive": true,
+      "hue": 306,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 18",
+        "en": "Interlude 18",
+        "ja": "間奏曲 18",
+        "zh-Hans": "插曲 18",
+        "es": "Interludio 18"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-019",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "19",
+      "interactive": true,
+      "hue": 343,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 19",
+        "en": "Interlude 19",
+        "ja": "間奏曲 19",
+        "zh-Hans": "插曲 19",
+        "es": "Interludio 19"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-020",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "all",
+      "interactive": true,
+      "hue": 20,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 20",
+        "en": "Interlude 20",
+        "ja": "間奏曲 20",
+        "zh-Hans": "插曲 20",
+        "es": "Interludio 20"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-021",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "12",
+      "interactive": true,
+      "hue": 57,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 21",
+        "en": "Interlude 21",
+        "ja": "間奏曲 21",
+        "zh-Hans": "插曲 21",
+        "es": "Interludio 21"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-022",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "15",
+      "interactive": true,
+      "hue": 94,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 22",
+        "en": "Interlude 22",
+        "ja": "間奏曲 22",
+        "zh-Hans": "插曲 22",
+        "es": "Interludio 22"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-023",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "19",
+      "interactive": true,
+      "hue": 131,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 23",
+        "en": "Interlude 23",
+        "ja": "間奏曲 23",
+        "zh-Hans": "插曲 23",
+        "es": "Interludio 23"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-024",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "all",
+      "interactive": true,
+      "hue": 168,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 24",
+        "en": "Interlude 24",
+        "ja": "間奏曲 24",
+        "zh-Hans": "插曲 24",
+        "es": "Interludio 24"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-025",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "12",
+      "interactive": true,
+      "hue": 205,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 25",
+        "en": "Interlude 25",
+        "ja": "間奏曲 25",
+        "zh-Hans": "插曲 25",
+        "es": "Interludio 25"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-026",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "15",
+      "interactive": true,
+      "hue": 242,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 26",
+        "en": "Interlude 26",
+        "ja": "間奏曲 26",
+        "zh-Hans": "插曲 26",
+        "es": "Interludio 26"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-027",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "19",
+      "interactive": true,
+      "hue": 279,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 27",
+        "en": "Interlude 27",
+        "ja": "間奏曲 27",
+        "zh-Hans": "插曲 27",
+        "es": "Interludio 27"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-028",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "all",
+      "interactive": true,
+      "hue": 316,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 28",
+        "en": "Interlude 28",
+        "ja": "間奏曲 28",
+        "zh-Hans": "插曲 28",
+        "es": "Interludio 28"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-029",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "12",
+      "interactive": true,
+      "hue": 353,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 29",
+        "en": "Interlude 29",
+        "ja": "間奏曲 29",
+        "zh-Hans": "插曲 29",
+        "es": "Interludio 29"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-030",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "15",
+      "interactive": true,
+      "hue": 30,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 30",
+        "en": "Interlude 30",
+        "ja": "間奏曲 30",
+        "zh-Hans": "插曲 30",
+        "es": "Interludio 30"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-031",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "19",
+      "interactive": true,
+      "hue": 67,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 31",
+        "en": "Interlude 31",
+        "ja": "間奏曲 31",
+        "zh-Hans": "插曲 31",
+        "es": "Interludio 31"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-032",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "all",
+      "interactive": true,
+      "hue": 104,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 32",
+        "en": "Interlude 32",
+        "ja": "間奏曲 32",
+        "zh-Hans": "插曲 32",
+        "es": "Interludio 32"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-033",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "12",
+      "interactive": true,
+      "hue": 141,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 33",
+        "en": "Interlude 33",
+        "ja": "間奏曲 33",
+        "zh-Hans": "插曲 33",
+        "es": "Interludio 33"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-034",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "15",
+      "interactive": true,
+      "hue": 178,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 34",
+        "en": "Interlude 34",
+        "ja": "間奏曲 34",
+        "zh-Hans": "插曲 34",
+        "es": "Interludio 34"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-035",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "19",
+      "interactive": true,
+      "hue": 215,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 35",
+        "en": "Interlude 35",
+        "ja": "間奏曲 35",
+        "zh-Hans": "插曲 35",
+        "es": "Interludio 35"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-036",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "all",
+      "interactive": true,
+      "hue": 252,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 36",
+        "en": "Interlude 36",
+        "ja": "間奏曲 36",
+        "zh-Hans": "插曲 36",
+        "es": "Interludio 36"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-037",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "12",
+      "interactive": true,
+      "hue": 289,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 37",
+        "en": "Interlude 37",
+        "ja": "間奏曲 37",
+        "zh-Hans": "插曲 37",
+        "es": "Interludio 37"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-038",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "15",
+      "interactive": true,
+      "hue": 326,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 38",
+        "en": "Interlude 38",
+        "ja": "間奏曲 38",
+        "zh-Hans": "插曲 38",
+        "es": "Interludio 38"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-039",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "19",
+      "interactive": true,
+      "hue": 3,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 39",
+        "en": "Interlude 39",
+        "ja": "間奏曲 39",
+        "zh-Hans": "插曲 39",
+        "es": "Interludio 39"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-040",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "all",
+      "interactive": true,
+      "hue": 40,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 40",
+        "en": "Interlude 40",
+        "ja": "間奏曲 40",
+        "zh-Hans": "插曲 40",
+        "es": "Interludio 40"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-041",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "12",
+      "interactive": true,
+      "hue": 77,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 41",
+        "en": "Interlude 41",
+        "ja": "間奏曲 41",
+        "zh-Hans": "插曲 41",
+        "es": "Interludio 41"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-042",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "15",
+      "interactive": true,
+      "hue": 114,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 42",
+        "en": "Interlude 42",
+        "ja": "間奏曲 42",
+        "zh-Hans": "插曲 42",
+        "es": "Interludio 42"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-043",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "19",
+      "interactive": true,
+      "hue": 151,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 43",
+        "en": "Interlude 43",
+        "ja": "間奏曲 43",
+        "zh-Hans": "插曲 43",
+        "es": "Interludio 43"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-044",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "all",
+      "interactive": true,
+      "hue": 188,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 44",
+        "en": "Interlude 44",
+        "ja": "間奏曲 44",
+        "zh-Hans": "插曲 44",
+        "es": "Interludio 44"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-045",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "12",
+      "interactive": true,
+      "hue": 225,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 45",
+        "en": "Interlude 45",
+        "ja": "間奏曲 45",
+        "zh-Hans": "插曲 45",
+        "es": "Interludio 45"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-046",
+      "status": "coming_soon",
+      "genre": "drama",
+      "age": "15",
+      "interactive": true,
+      "hue": 262,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 46",
+        "en": "Interlude 46",
+        "ja": "間奏曲 46",
+        "zh-Hans": "插曲 46",
+        "es": "Interludio 46"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-047",
+      "status": "coming_soon",
+      "genre": "mystery",
+      "age": "19",
+      "interactive": true,
+      "hue": 299,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 47",
+        "en": "Interlude 47",
+        "ja": "間奏曲 47",
+        "zh-Hans": "插曲 47",
+        "es": "Interludio 47"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-048",
+      "status": "coming_soon",
+      "genre": "action",
+      "age": "all",
+      "interactive": true,
+      "hue": 336,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 48",
+        "en": "Interlude 48",
+        "ja": "間奏曲 48",
+        "zh-Hans": "插曲 48",
+        "es": "Interludio 48"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-049",
+      "status": "coming_soon",
+      "genre": "sf",
+      "age": "12",
+      "interactive": true,
+      "hue": 13,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 49",
+        "en": "Interlude 49",
+        "ja": "間奏曲 49",
+        "zh-Hans": "插曲 49",
+        "es": "Interludio 49"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-050",
+      "status": "coming_soon",
+      "genre": "fantasy",
+      "age": "15",
+      "interactive": true,
+      "hue": 50,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 50",
+        "en": "Interlude 50",
+        "ja": "間奏曲 50",
+        "zh-Hans": "插曲 50",
+        "es": "Interludio 50"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-051",
+      "status": "coming_soon",
+      "genre": "romance",
+      "age": "19",
+      "interactive": true,
+      "hue": 87,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 51",
+        "en": "Interlude 51",
+        "ja": "間奏曲 51",
+        "zh-Hans": "插曲 51",
+        "es": "Interludio 51"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    },
+    {
+      "id": "title-052",
+      "status": "coming_soon",
+      "genre": "thriller",
+      "age": "all",
+      "interactive": true,
+      "hue": 124,
+      "episodes": 1,
+      "titles": {
+        "ko": "인터루드 52",
+        "en": "Interlude 52",
+        "ja": "間奏曲 52",
+        "zh-Hans": "插曲 52",
+        "es": "Interludio 52"
+      },
+      "logline": {
+        "ko": "곧 공개됩니다. 새로운 인터랙티브 이야기.",
+        "en": "Coming soon — a new interactive story."
+      }
+    }
+  ]
+}

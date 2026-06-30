@@ -1,0 +1,46 @@
+:root {
+  --sky-50: #f4fafe;
+  --sky-100: #e8f4fc;
+  --sky-200: #c5e8f7;
+  --sky-300: #7ec8e8;
+  --sky-400: #4a90b8;
+  --sky-500: #2d6a8a;
+  --gold: #f0b86c;
+  --gold-soft: #f8d9a8;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+
+  --font-display: 'Outfit', 'Noto Sans KR', system-ui, sans-serif;
+  --font-body: 'Noto Sans KR', 'Outfit', system-ui, sans-serif;
+
+  --shadow-soft: 0 8px 32px rgba(10, 30, 50, 0.12);
+  --shadow-card: 0 12px 40px rgba(10, 30, 50, 0.18);
+  --transition: 220ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-theme='light'] {
+  --bg: var(--sky-50);
+  --bg-elevated: #ffffff;
+  --bg-glass: rgba(255, 255, 255, 0.82);
+  --text: #1a2838;
+  --text-muted: #5a7088;
+  --border: rgba(74, 144, 184, 0.22);
+  --nav-bg: rgba(244, 250, 254, 0.92);
+  --hero-overlay: linear-gradient(90deg, rgba(244, 250, 254, 0.95) 0%, rgba(244, 250, 254, 0.4) 55%, transparent 100%);
+  --card-hover: rgba(126, 200, 232, 0.15);
+}
+
+[data-theme='dark'] {
+  --bg: #0b1220;
+  --bg-elevated: #141e2e;
+  --bg-glass: rgba(20, 30, 46, 0.88);
+  --text: #e8f1ff;
+  --text-muted: #9ab0d0;
+  --border: rgba(126, 200, 232, 0.18);
+  --nav-bg: rgba(11, 18, 32, 0.92);
+  --hero-overlay: linear-gradient(90deg, rgba(11, 18, 32, 0.96) 0%, rgba(11, 18, 32, 0.5) 55%, transparent 100%);
+  --card-hover: rgba(126, 200, 232, 0.12);
+}

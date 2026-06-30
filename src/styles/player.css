@@ -1,0 +1,136 @@
+.player-page {
+  position: fixed;
+  inset: 0;
+  z-index: 80;
+  background: #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.player-stage {
+  flex: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.player-canvas {
+  width: 100%;
+  height: 100%;
+  max-height: 100dvh;
+  object-fit: contain;
+  background: #02040a;
+}
+
+.player-overlay-top {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  padding: 1rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+  pointer-events: none;
+}
+.player-page.show-ui .player-overlay-top,
+.player-page.show-ui .player-controls { opacity: 1; pointer-events: auto; }
+
+.branch-badge {
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(0,0,0,0.5);
+  border: 1px solid rgba(240, 184, 108, 0.4);
+  font-size: 0.78rem;
+  color: var(--gold-soft);
+}
+
+.player-dialogue {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 5.5rem;
+  padding: 1rem 1.25rem;
+  background: rgba(8, 12, 24, 0.82);
+  border-top: 1px solid rgba(126, 200, 232, 0.15);
+}
+.player-dialogue.hidden { display: none; }
+.player-dialogue .speaker { color: var(--sky-300); font-weight: 600; margin: 0 0 0.3rem; }
+.player-dialogue .line { margin: 0; line-height: 1.55; }
+
+.player-interaction {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 5.5rem;
+  padding: 1rem 1.25rem;
+  background: rgba(8, 12, 24, 0.9);
+}
+.player-interaction.hidden { display: none; }
+.choice-row { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.65rem; }
+
+.player-controls {
+  position: absolute;
+  left: 0; right: 0;
+  bottom: 0;
+  padding: 0.75rem 1rem 1.25rem;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.progress-wrap { position: relative; height: 20px; margin-bottom: 0.5rem; cursor: pointer; }
+.progress-rail {
+  position: absolute;
+  left: 0; right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 999px;
+}
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--sky-300), var(--gold));
+  border-radius: 999px;
+  width: 0%;
+  transition: width 0.1s linear;
+}
+.branch-marker {
+  position: absolute;
+  top: 50%;
+  width: 8px; height: 8px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 8px var(--gold);
+}
+.progress-time {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0.35rem;
+}
+.control-row { display: flex; align-items: center; gap: 0.5rem; }
+
+.recap-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem clamp(1rem, 3vw, 2rem);
+}
+.path-tree {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+.path-node {
+  padding: 0.45rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  font-size: 0.85rem;
+}
+.path-node.active { border-color: var(--gold); color: var(--gold); }

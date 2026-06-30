@@ -1,0 +1,16 @@
+{
+  "meta": { "label": "Español" },
+  "brand": { "tagline": "Continúa el camino de tu historia" },
+  "nav": { "home": "Inicio", "browse": "Explorar", "search": "Buscar", "mylist": "Mi lista" },
+  "home": { "continue": "Seguir viendo", "interactive": "Interactivos", "trending": "Tendencias", "new": "Nuevo & Próximamente", "mylist": "Mi lista" },
+  "genre": { "sf": "Ciencia ficción", "fantasy": "Fantasía", "romance": "Romance", "thriller": "Suspenso", "drama": "Drama", "mystery": "Misterio", "action": "Acción" },
+  "status": { "playable": "Reproducir", "development": "En desarrollo", "coming_soon": "Próximamente" },
+  "actions": { "play": "Reproducir", "resume": "Continuar", "addList": "Mi lista", "removeList": "Quitar", "info": "Detalles", "notify": "Avísame", "profiles": "Perfiles", "settings": "Ajustes", "back": "Atrás", "skip": "Saltar", "fullscreen": "Pantalla completa", "saveRoad": "Save Road" },
+  "search": { "placeholder": "Buscar títulos, géneros, personajes…", "empty": "Sin resultados", "suggest": "Te puede gustar" },
+  "browse": { "title": "Explorar", "filterGenre": "Género", "filterAge": "Edad", "filterStatus": "Estado", "sort": "Ordenar", "sortRec": "Recomendado", "sortNew": "Nuevo", "sortTitle": "Título" },
+  "profile": { "title": "¿Quién ve?", "add": "Añadir", "guest": "Invitado" },
+  "gate": { "title": "Elige un perfil", "body": "Los invitados solo ven el avance del episodio 1.", "cta": "Elegir perfil" },
+  "player": { "branch": "Ruta actual", "locked": "Rama bloqueada", "quality": "Calidad", "subtitles": "Subtítulos" },
+  "recap": { "title": "Resumen", "path": "Tu camino", "next": "Siguiente", "home": "Inicio" },
+  "settings": { "theme": "Tema", "themeLight": "Claro", "themeDark": "Oscuro", "language": "Idioma", "mature": "Contenido adulto", "quality": "Calidad" }
+}

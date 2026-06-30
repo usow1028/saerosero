@@ -1,0 +1,67 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.65rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--bg-glass);
+  cursor: pointer;
+  transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
+  font-weight: 500;
+}
+
+.btn:hover { transform: translateY(-1px); background: var(--card-hover); }
+.btn-primary {
+  background: linear-gradient(135deg, var(--sky-300), var(--sky-400));
+  border-color: transparent;
+  color: #0b1220;
+  font-weight: 600;
+}
+.btn-ghost { background: transparent; }
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold-soft), var(--gold));
+  border-color: transparent;
+  color: #1a2838;
+}
+
+.chip {
+  display: inline-flex;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  background: rgba(126, 200, 232, 0.18);
+  color: var(--sky-300);
+  border: 1px solid var(--border);
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+}
+.logo-saero { color: var(--sky-300); }
+.logo-sero { color: var(--gold); }
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(5, 10, 20, 0.72);
+  backdrop-filter: blur(8px);
+  display: grid;
+  place-items: center;
+  z-index: 100;
+  padding: 1rem;
+}
+.modal {
+  width: min(480px, 100%);
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-card);
+  animation: fadeIn 280ms ease;
+}
