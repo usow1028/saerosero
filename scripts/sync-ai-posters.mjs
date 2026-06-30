@@ -11,12 +11,12 @@ try {
   existing = JSON.parse(readFileSync(path.join(ROOT, 'src/data/ai-posters.json'), 'utf8'));
 } catch { /* fresh */ }
 
-const activeVariant = existing.activeVariant ?? 'v4';
-const variantDir = path.join(posterRoot, activeVariant);
+const artSource = existing.artSource ?? 'raw';
+const artDir = path.join(posterRoot, artSource);
 const onDisk = new Set(
-  existsSync(variantDir)
-    ? readdirSync(variantDir).filter((f) => f.endsWith('.jpg')).map((f) => f.replace(/\.jpg$/, ''))
-    : readdirSync(posterRoot).filter((f) => f.endsWith('.jpg')).map((f) => f.replace(/\.jpg$/, '')),
+  existsSync(artDir)
+    ? readdirSync(artDir).filter((f) => f.endsWith('.jpg')).map((f) => f.replace(/\.jpg$/, ''))
+    : [],
 );
 
 const jpgIds = catalog.titles.map((t) => t.id).filter((id) => onDisk.has(id));
@@ -25,11 +25,12 @@ writeFileSync(
   path.join(ROOT, 'src/data/ai-posters.json'),
   JSON.stringify({
     ...existing,
-    version: existing.version ?? 4,
-    activeVariant,
+    version: existing.version ?? 7,
+    dynamicTitles: existing.dynamicTitles !== false,
+    artSource,
     variants: existing.variants ?? { v1: 'v1', v2: 'v2', v3: 'v3', v4: 'v4' },
     updatedAt: new Date().toISOString(),
     jpgIds,
   }, null, 2),
 );
-console.log(`ai-posters.json: ${jpgIds.length} titles @ ${activeVariant}/`);
+console.log(`ai-posters.json: ${jpgIds.length} titles @ ${artSource}/ (dynamicTitles)`);

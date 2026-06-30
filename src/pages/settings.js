@@ -14,7 +14,6 @@ export function renderSettings(container, navigate) {
     settingsGroup(t('settings.language'), el('select', { class: 'select-field' }, listLocales().map((l) => opt(l.code, l.label, s.locale))), (e) => {
       patchSettings({ locale: e.target.value });
       setLocale(e.target.value);
-      navigate('/settings');
     }),
     settingsGroup(t('settings.mature'), toggleInput(s.mature), (e) => patchSettings({ mature: e.target.checked })),
     settingsGroup(t('settings.quality'), el('select', { class: 'select-field' }, [

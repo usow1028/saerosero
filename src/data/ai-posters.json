@@ -1,5 +1,7 @@
 {
-  "version": 6,
+  "version": 7,
+  "dynamicTitles": true,
+  "artSource": "raw",
   "activeVariant": "v4",
   "variants": {
     "v1": "v1",

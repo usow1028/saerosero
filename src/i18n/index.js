@@ -13,6 +13,7 @@ let current = 'ko';
 export function setLocale(code) {
   current = locales[code] ? code : FALLBACK;
   document.documentElement.lang = current === 'zh-Hans' ? 'zh' : current.split('-')[0];
+  window.dispatchEvent(new CustomEvent('saerosero:locale', { detail: current }));
   return current;
 }
 

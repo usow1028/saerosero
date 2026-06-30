@@ -1,28 +1,30 @@
 import aiPosters from '../data/ai-posters.json';
 import { titleName } from '../services/CatalogService.js';
-import { getLocale, t } from '../i18n/index.js';
-import { el } from './helpers.js';
+import { getLocale } from '../i18n/index.js';
+import { createPosterTitleOverlay } from './PosterTitleOverlay.js';
 
 const jpgIds = new Set(aiPosters.jpgIds ?? []);
-const activeVariant = aiPosters.activeVariant ?? 'v4';
-
-const GENRE_CLASS = {
-  sf: 'poster-title--sf',
-  fantasy: 'poster-title--fantasy',
-  romance: 'poster-title--romance',
-  thriller: 'poster-title--thriller',
-  drama: 'poster-title--drama',
-  mystery: 'poster-title--mystery',
-  action: 'poster-title--action',
-};
+const dynamicTitles = aiPosters.dynamicTitles !== false;
+const artSource = aiPosters.artSource ?? 'raw';
+const bakedVariant = aiPosters.activeVariant ?? 'v4';
 
 export function posterVariant() {
-  return activeVariant;
+  return dynamicTitles ? 'dynamic' : bakedVariant;
 }
 
-export function posterUrl(titleId, { preferJpg = true, variant = activeVariant } = {}) {
+/** Text-free art layer — locale can change via CSS overlay */
+export function artPosterUrl(titleId) {
+  if (jpgIds.has(titleId)) {
+    return `/assets/posters/${artSource}/${titleId}.jpg`;
+  }
+  return `/assets/posters/${titleId}.svg`;
+}
+
+export function posterUrl(titleId, { preferJpg = true, variant } = {}) {
+  if (dynamicTitles) return artPosterUrl(titleId);
+  const v = variant ?? bakedVariant;
   if (preferJpg && jpgIds?.has(titleId)) {
-    return `/assets/posters/${variant}/${titleId}.jpg`;
+    return `/assets/posters/${v}/${titleId}.jpg`;
   }
   return `/assets/posters/${titleId}.svg`;
 }
@@ -31,38 +33,14 @@ export function heroPosterUrl(titleId) {
   return posterUrl(titleId);
 }
 
-function secondaryTitle(title, locale) {
-  const primary = titleName(title, locale);
-  const en = title.titles?.en ?? '';
-  const ko = title.titles?.ko ?? '';
-  if (locale === 'ko') return en;
-  if (locale === 'en') return ko;
-  return en !== primary ? en : ko;
-}
-
-function createPosterTitleOverlay(title, { show = true } = {}) {
-  if (!show) return null;
-  const locale = getLocale();
-  const primary = titleName(title, locale);
-  const secondary = secondaryTitle(title, locale);
-  const genreClass = GENRE_CLASS[title.genre] ?? 'poster-title--drama';
-
-  const wrap = el('div', { class: `poster-title ${genreClass}` });
-  wrap.append(
-    el('span', { class: 'poster-title-tag', text: t(`genre.${title.genre}`) }),
-    el('div', { class: 'poster-title-rule' }),
-    el('span', { class: 'poster-title-primary', text: primary }),
-    secondary ? el('span', { class: 'poster-title-secondary', text: secondary }) : null,
-  );
-  return wrap;
-}
-
-export function createPosterMedia(title, { animate = true, titleOverlay = null } = {}) {
+export function createPosterMedia(title, { animate = true } = {}) {
   const frame = document.createElement('div');
   frame.className = 'poster-frame';
+  frame.dataset.titleId = title.id;
 
   const img = document.createElement('img');
   img.className = 'poster-img';
+  img.dataset.titleId = title.id;
   img.alt = titleName(title, getLocale());
   img.loading = 'lazy';
   img.decoding = 'async';
@@ -70,30 +48,21 @@ export function createPosterMedia(title, { animate = true, titleOverlay = null }
     img.style.objectPosition = title.heroFocus;
   }
 
-  const isJpg = jpgIds.has(title.id);
-  const overlay = titleOverlay ?? !isJpg;
-
   img.src = posterUrl(title.id);
   img.addEventListener('error', () => {
-    if (img.src.includes('.jpg')) {
-      const variants = ['v4', 'v3', 'v2', 'v1'];
-      const current = variants.find((v) => img.src.includes(`/${v}/`));
-      const fallbackVariant = current ? variants[variants.indexOf(current) + 1] : null;
-      if (fallbackVariant && jpgIds.has(title.id)) {
-        img.src = posterUrl(title.id, { variant: fallbackVariant });
-        return;
-      }
-      img.src = posterUrl(title.id, { preferJpg: false });
-      const fallbackTitle = createPosterTitleOverlay(title, { show: true });
-      if (fallbackTitle) frame.append(fallbackTitle);
+    if (img.src.includes('/raw/')) {
+      img.src = `/assets/posters/v4/${title.id}.jpg`;
+      return;
     }
-  }, { once: true });
+    if (img.src.includes('.jpg')) {
+      img.src = `/assets/posters/${title.id}.svg`;
+    }
+  });
 
   frame.append(img);
 
-  if (overlay) {
-    const titleEl = createPosterTitleOverlay(title);
-    if (titleEl) frame.append(titleEl);
+  if (dynamicTitles) {
+    frame.append(createPosterTitleOverlay(title));
   }
 
   if (animate) {

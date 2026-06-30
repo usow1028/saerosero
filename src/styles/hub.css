@@ -279,6 +279,85 @@
 .poster-title--action .poster-title-secondary { color: #fdba74; }
 .poster-title--action .poster-title-primary { font-weight: 800; letter-spacing: 0.03em; }
 
+/* Dynamic layout variants — 8 art directions, locale-aware overlay */
+.poster-title-tagline {
+  font-size: 0.46rem;
+  font-style: italic;
+  line-height: 1.3;
+  opacity: 0.78;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.poster-layout--bottom-hero { inset: auto 0 0 0; padding: 0.65rem 0.5rem 0.55rem; }
+.poster-layout--bottom-hero .poster-title-primary { font-size: 0.82rem; letter-spacing: -0.02em; }
+
+.poster-layout--vertical {
+  inset: 8% auto 8% 6%;
+  width: auto;
+  max-width: 42%;
+  padding: 0;
+  background: linear-gradient(90deg, rgba(4, 8, 18, 0.75) 0%, transparent 100%);
+  justify-content: center;
+}
+.poster-layout--vertical .poster-title-primary {
+  writing-mode: vertical-rl;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-orientation: mixed;
+}
+.poster-layout--vertical .poster-title-rule { width: 2px; height: 1.2rem; margin: 0.2rem auto; }
+.poster-layout--vertical .poster-title-secondary { writing-mode: vertical-rl; font-size: 0.42rem; }
+
+.poster-layout--center {
+  inset: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0.5rem;
+  background: radial-gradient(ellipse 85% 55% at 50% 50%, rgba(4, 8, 18, 0.82) 0%, transparent 70%);
+}
+.poster-layout--center .poster-title-primary { font-size: 0.78rem; }
+.poster-layout--center .poster-title-tag { align-self: center; }
+
+.poster-layout--diagonal {
+  inset: auto 0 12% 0;
+  padding: 0.5rem 0.45rem;
+  transform: rotate(-4deg);
+  transform-origin: left bottom;
+}
+.poster-layout--diagonal .poster-title-primary { font-size: 0.8rem; font-weight: 800; }
+
+.poster-layout--top-tag {
+  inset: 0 0 auto 0;
+  padding: 0.5rem 0.45rem 0.4rem;
+  background: linear-gradient(180deg, rgba(4, 8, 18, 0.88) 0%, transparent 100%);
+}
+.poster-layout--top-tag .poster-title-primary { font-size: 0.62rem; order: -1; }
+.poster-layout--top-tag .poster-title-tag { order: 1; margin-top: 0.2rem; }
+.poster-layout--top-tag .poster-title-rule { display: none; }
+
+.poster-layout--neon .poster-title-primary {
+  font-size: 0.76rem;
+  text-shadow: 0 0 8px currentColor, 0 0 16px currentColor;
+}
+.poster-layout--neon { inset: auto 0 14% 0; text-align: center; padding: 0.5rem; background: none; }
+.poster-layout--neon .poster-title-tag { align-self: center; }
+
+.poster-layout--drama .poster-title-primary { font-family: "Noto Serif KR", serif; font-size: 0.74rem; }
+.poster-layout--drama { inset: auto 0 0 0; padding: 0.6rem 0.5rem; }
+
+.poster-layout--blockbuster .poster-title-primary {
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 0.95;
+}
+.poster-layout--blockbuster { inset: auto 0 0 0; padding: 0.55rem 0.45rem; background: linear-gradient(to top, rgba(0, 0, 0, 0.92) 0%, transparent 100%); }
+.poster-layout--blockbuster .poster-title-secondary { letter-spacing: 0.2em; font-size: 0.44rem; }
+
 .title-card-caption {
   margin: 0.35rem 0 0;
   font-size: 0.78rem;

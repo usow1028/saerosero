@@ -1,4 +1,4 @@
-import { startRouter, navigate as nav, route } from './router.js';
+import { startRouter, navigate as nav, route, dispatch } from './router.js';
 import { getSettings, applyTheme, patchSettings } from './services/SettingsService.js';
 import { setLocale } from './i18n/index.js';
 import { createNav } from './ui/Nav.js';
@@ -16,6 +16,7 @@ import { loadCatalog, filterTitles, titleName } from './services/CatalogService.
 import { getMyList } from './services/ProgressService.js';
 import { getLocale, t } from './i18n/index.js';
 import { createTitleCard } from './ui/TitleCard.js';
+
 
 const root = document.getElementById('root');
 let splashDone = false;
@@ -84,6 +85,10 @@ function boot() {
   route('/recap/:id/:ep', ({ params, state }) => render(`/recap/${params.id}/${params.ep}`, state));
 
   startRouter(render);
+
+  window.addEventListener('saerosero:locale', () => {
+    dispatch(location.hash.slice(1) || '/');
+  });
 }
 
 async function renderMyList(container, navigate) {
