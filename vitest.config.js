@@ -1,5 +1,6 @@
+/** goal-deliverable: studio-guild */
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
-  test: { environment: 'node', include: ['tests/**/*.test.js'] },
+  test: { environment: 'node', include: ['tests/**/*.test.js', 'tests/goal/**/*.test.js'] },
 });

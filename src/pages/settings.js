@@ -1,4 +1,5 @@
 import { getSettings, patchSettings } from '../services/SettingsService.js';
+import { patchGuildSettings, getGuildSettings, setCommercialProxy } from '../services/guild/GuildSettingsService.js';
 import { setLocale, listLocales, t } from '../i18n/index.js';
 import { el } from '../ui/helpers.js';
 
@@ -19,6 +20,21 @@ export function renderSettings(container, navigate) {
     settingsGroup(t('settings.quality'), el('select', { class: 'select-field' }, [
       opt('auto', 'Auto', s.quality), opt('720', '720p', s.quality), opt('1080', '1080p', s.quality),
     ]), (e) => patchSettings({ quality: e.target.value })),
+    settingsGroup(t('settings.localLlmEndpoint'), endpointInput(s.localLlmEndpoint), (e) => {
+      patchSettings({ localLlmEndpoint: e.target.value.trim() || s.localLlmEndpoint });
+      const guild = getGuildSettings();
+      for (const c of guild.localLlm) c.endpoint = e.target.value.trim() || c.endpoint;
+      patchGuildSettings(guild);
+    }),
+    settingsGroup(t('settings.localLlmModel'), modelInput(s.localLlmModel), (e) => {
+      patchSettings({ localLlmModel: e.target.value.trim() || s.localLlmModel });
+      const guild = getGuildSettings();
+      for (const c of guild.localLlm) c.model = e.target.value.trim() || c.model;
+      patchGuildSettings(guild);
+    }),
+    settingsGroup(t('settings.commercialProxy'), endpointInput(getGuildSettings().commercialProxy), (e) => {
+      setCommercialProxy(e.target.value);
+    }),
   );
 
   container.replaceChildren(
@@ -40,6 +56,24 @@ function toggleInput(checked) {
   const input = el('input', { type: 'checkbox', class: 'toggle-field' });
   if (checked) input.checked = true;
   return input;
+}
+
+function endpointInput(value) {
+  return el('input', {
+    class: 'text-field',
+    type: 'url',
+    value,
+    placeholder: 'http://127.0.0.1:11434',
+  });
+}
+
+function modelInput(value) {
+  return el('input', {
+    class: 'text-field',
+    type: 'text',
+    value,
+    placeholder: 'llama3',
+  });
 }
 
 function settingsGroup(label, control, onChange) {

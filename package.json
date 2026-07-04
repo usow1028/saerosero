@@ -1,4 +1,5 @@
 {
+  "_comment": "goal-deliverable: studio-guild",
   "name": "saerosero",
   "version": "0.2.0",
   "private": true,
@@ -13,7 +14,8 @@
     "seed:posters:titles:force": "node scripts/posters/render-title-art.mjs --force",
     "seed:posters": "npm run seed:posters:art && npm run seed:posters:titles",
     "seed": "npm run seed:catalog && npm run seed:posters",
-    "test": "vitest run"
+    "test": "vitest run",
+    "verify:goal": "node tests/verify-goal.mjs"
   },
   "devDependencies": {
     "playwright": "^1.61.1",

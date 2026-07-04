@@ -11,12 +11,91 @@
   },
   "genre": { "sf": "Sci-Fi", "fantasy": "Fantasy", "romance": "Romance", "thriller": "Thriller", "drama": "Drama", "mystery": "Mystery", "action": "Action" },
   "status": { "playable": "Play Now", "development": "In Development", "coming_soon": "Coming Soon" },
-  "actions": { "play": "Play", "resume": "Resume", "addList": "Add to My List", "removeList": "Remove", "info": "Details", "notify": "Notify Me", "profiles": "Profiles", "settings": "Settings", "back": "Back", "skip": "Skip", "fullscreen": "Fullscreen", "saveRoad": "Save Road" },
+  "actions": { "play": "Play", "resume": "Resume", "playFull": "Watch Full", "addList": "Add to My List", "removeList": "Remove", "info": "Details", "notify": "Notify Me", "profiles": "Profiles", "settings": "Settings", "back": "Back", "skip": "Skip", "fullscreen": "Fullscreen", "saveRoad": "Save Road" },
+  "feed": {
+    "forYou": "For You",
+    "studio": "Studio",
+    "fullDetail": "Full Details",
+    "interactive": "Interactive Story",
+    "comments": "Comments",
+    "noComments": "Be the first to comment",
+    "commentPlaceholder": "Write a comment…",
+    "commentPost": "Post"
+  },
   "search": { "placeholder": "Search titles, genres, characters…", "empty": "No results found", "suggest": "You might like" },
   "browse": { "title": "Browse", "filterGenre": "Genre", "filterAge": "Age", "filterStatus": "Status", "sort": "Sort", "sortRec": "Recommended", "sortNew": "Newest", "sortTitle": "Title" },
   "profile": { "title": "Who's watching?", "add": "Add Profile", "guest": "Browse as Guest" },
   "gate": { "title": "Select a profile to continue", "body": "Guests can watch the Episode 1 preview only.", "cta": "Choose Profile" },
   "player": { "branch": "Current route", "locked": "Branch locked", "quality": "Quality", "subtitles": "Subtitles" },
   "recap": { "title": "Story Recap", "path": "Your path", "next": "Next episode", "home": "Back to Home" },
-  "settings": { "theme": "Theme", "themeLight": "Light", "themeDark": "Dark", "language": "Language", "mature": "Show mature content", "quality": "Default quality" }
+  "settings": { "theme": "Theme", "themeLight": "Light", "themeDark": "Dark", "language": "Language", "mature": "Show mature content", "quality": "Default quality", "localLlmEndpoint": "Local LLM endpoint", "localLlmModel": "Local LLM model", "commercialProxy": "LiteLLM proxy (ChatGPT, Claude, Grok, Gemini)" },
+  "guild": {
+    "title": "Studio Guild",
+    "lead": "Public-site AIs and local LLMs collaborate without metered API billing.",
+    "leadAutomation": "Commercial AIs plan the work, recruit a party, found a studio, assign roles, and automatically produce one work.",
+    "publicAi": "Commercial AI (LiteLLM)",
+    "localLlm": "Local LLM",
+    "hint": {
+      "public_ai": "ChatGPT, Claude, Grok, Gemini via LiteLLM proxy — point endpoint at http://127.0.0.1:4000.",
+      "local_llm": "Uses a local inference endpoint such as Ollama."
+    },
+    "kind": {
+      "public_ai": "Public-site AI",
+      "local_llm": "Local LLM"
+    },
+    "phase": {
+      "planning": "Work planning",
+      "recruitment": "Recruitment",
+      "founding": "Studio founding",
+      "role_assignment": "Role assignment",
+      "production": "Production",
+      "completed": "Complete"
+    },
+    "phaseRunning": {
+      "planning": "Commercial AIs are planning the work…",
+      "recruitment": "AIs are recruiting guild members…",
+      "founding": "Negotiating studio name and charter…",
+      "role_assignment": "Assigning roles and coordinating…",
+      "production": "Producing the work by role…",
+      "completed": "Automation pipeline finished."
+    },
+    "role": {
+      "showrunner": "Showrunner",
+      "screenwriter": "Screenwriter",
+      "worldbuilder": "Worldbuilder",
+      "editor": "Editor",
+      "critic": "Critic",
+      "refiner": "Local refiner"
+    },
+    "rolePending": "Pending",
+    "startSession": "Start guild session",
+    "startAutomation": "Start guild automation",
+    "running": "Running collaboration pipeline…",
+    "automationRunning": "Running guild automation…",
+    "completed": "Guild work saved.",
+    "automationCompleted": "Guild automation finished and work was saved.",
+    "failed": "Could not complete the session.",
+    "inferenceFailed": "Could not reach the inference endpoint. Check LiteLLM proxy or Ollama URL.",
+    "rosterFailed": "Inference-driven recruitment or role negotiation failed. Check endpoints and collaborators.",
+    "needBothKinds": "Enable at least one public-site AI and one local LLM.",
+    "bus": "Guild bus (AI-to-AI chat)",
+    "busEmpty": "Start automation to see AIs negotiate here.",
+    "roster": "Members & roles",
+    "rosterEmpty": "Roster appears after recruitment.",
+    "studioFounded": "Founded studio",
+    "pipeline": "Collaboration steps",
+    "artifact": "Merged work",
+    "noArtifact": "No guild work yet. Start automation.",
+    "endpointPlaceholder": "http://127.0.0.1:11434",
+    "proxyPlaceholder": "http://127.0.0.1:4000",
+    "modelPlaceholder": "model name",
+    "commercialProxy": "LiteLLM proxy",
+    "commercialProxyHint": "Run LiteLLM locally and point ChatGPT, Claude, Grok, Gemini rows at this OpenAI-compatible URL.",
+    "workPlan": "Work plan",
+    "planEmpty": "Work plan appears after commercial AIs finish planning.",
+    "planRoles": "Needed roles",
+    "planReady": "Work plan ready",
+    "activity": "Live activity",
+    "guildWork": "Guild work"
+  }
 }

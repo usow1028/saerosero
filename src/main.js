@@ -4,7 +4,7 @@ import { setLocale } from './i18n/index.js';
 import { createNav } from './ui/Nav.js';
 import { createBrandLogo } from './ui/BrandLogo.js';
 import { el } from './ui/helpers.js';
-import { renderHome } from './pages/home.js';
+import { renderFeed } from './pages/feed.js';
 import { renderBrowse } from './pages/browse.js';
 import { renderSearch } from './pages/search.js';
 import { renderTitleDetail } from './pages/titleDetail.js';
@@ -53,10 +53,14 @@ function boot() {
   const go = (path, state = {}) => nav(path, state);
 
   async function render(path, routeState = {}) {
+    const isFeed = path === '/' || path === '';
     const isPlayer = path.startsWith('/watch/');
-    navSlot.replaceChildren(isPlayer ? el('div') : createNav(path.split('/')[1] ? `/${path.split('/')[1]}` : '/', go));
+    const hideNav = isFeed || isPlayer;
+    navSlot.replaceChildren(hideNav ? el('div') : createNav(path.split('/')[1] ? `/${path.split('/')[1]}` : '/', go));
+    shell.classList.toggle('app-shell--feed', isFeed);
+    page.classList.toggle('page--feed', isFeed);
 
-    if (path === '/' || path === '') return renderHome(page, go);
+    if (isFeed) return renderFeed(page, go);
     if (path === '/browse') return renderBrowse(page, go);
     if (path === '/search') return renderSearch(page, go);
     if (path === '/profiles') return renderProfiles(page, go);

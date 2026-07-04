@@ -11,12 +11,91 @@
   },
   "genre": { "sf": "SF", "fantasy": "판타지", "romance": "로맨스", "thriller": "스릴러", "drama": "드라마", "mystery": "미스터리", "action": "액션" },
   "status": { "playable": "지금 시청", "development": "제작 중", "coming_soon": "곧 공개" },
-  "actions": { "play": "재생", "resume": "이어서 보기", "addList": "찜하기", "removeList": "찜 해제", "info": "상세 정보", "notify": "알림 받기", "profiles": "프로필", "settings": "설정", "back": "뒤로", "skip": "건너뛰기", "fullscreen": "전체화면", "saveRoad": "세이브로드" },
+  "actions": { "play": "재생", "resume": "이어서 보기", "playFull": "전체 보기", "addList": "찜하기", "removeList": "찜 해제", "info": "상세 정보", "notify": "알림 받기", "profiles": "프로필", "settings": "설정", "back": "뒤로", "skip": "건너뛰기", "fullscreen": "전체화면", "saveRoad": "세이브로드" },
+  "feed": {
+    "forYou": "추천",
+    "studio": "스튜디오",
+    "fullDetail": "전체 정보",
+    "interactive": "인터랙티브 스토리",
+    "comments": "댓글",
+    "noComments": "첫 댓글을 남겨보세요",
+    "commentPlaceholder": "댓글을 입력하세요…",
+    "commentPost": "등록"
+  },
   "search": { "placeholder": "제목, 장르, 캐릭터 검색…", "empty": "검색 결과가 없습니다", "suggest": "이런 작품은 어떠세요?" },
   "browse": { "title": "둘러보기", "filterGenre": "장르", "filterAge": "연령", "filterStatus": "상태", "sort": "정렬", "sortRec": "추천순", "sortNew": "최신", "sortTitle": "제목" },
   "profile": { "title": "누가 시청하나요?", "add": "프로필 추가", "guest": "게스트로 둘러보기" },
   "gate": { "title": "계속 보려면 프로필을 선택하세요", "body": "비회원은 1화 맛보기까지만 시청할 수 있습니다.", "cta": "프로필 선택" },
   "player": { "branch": "현재 루트", "locked": "분기 잠금", "quality": "화질", "subtitles": "자막" },
   "recap": { "title": "스토리 결산", "path": "당신의 경로", "next": "다음 화", "home": "홈으로" },
-  "settings": { "theme": "테마", "themeLight": "라이트", "themeDark": "다크", "language": "언어", "mature": "성인 콘텐츠 표시", "quality": "기본 화질" }
+  "settings": { "theme": "테마", "themeLight": "라이트", "themeDark": "다크", "language": "언어", "mature": "성인 콘텐츠 표시", "quality": "기본 화질", "localLlmEndpoint": "로컬 LLM 엔드포인트", "localLlmModel": "로컬 LLM 모델", "commercialProxy": "LiteLLM 프록시 (ChatGPT, Claude, Grok, Gemini)" },
+  "guild": {
+    "title": "스튜디오 길드",
+    "lead": "공홈 AI와 로컬 LLM이 API 추가 과금 없이 협업해 작품을 만듭니다.",
+    "leadAutomation": "상용 AI가 작품을 기획하고, 파티를 모집·결성한 뒤 역할을 나눠 하나의 작품을 자동으로 만듭니다.",
+    "publicAi": "상용 AI (LiteLLM)",
+    "localLlm": "로컬 LLM",
+    "hint": {
+      "public_ai": "ChatGPT, Claude, Grok, Gemini — LiteLLM 프록시(http://127.0.0.1:4000)로 실제 추론을 호출합니다.",
+      "local_llm": "Ollama 등 로컬 추론 엔드포인트를 사용합니다."
+    },
+    "kind": {
+      "public_ai": "공홈 AI",
+      "local_llm": "로컬 LLM"
+    },
+    "phase": {
+      "planning": "작품 기획",
+      "recruitment": "길드원 모집",
+      "founding": "스튜디오 설립",
+      "role_assignment": "역할 배정",
+      "production": "작품 제작",
+      "completed": "완료"
+    },
+    "phaseRunning": {
+      "planning": "상용 AI들이 작품을 기획하며 대화 중…",
+      "recruitment": "AI들이 길드원을 모집하며 대화 중…",
+      "founding": "스튜디오 이름과 헌장을 합의 중…",
+      "role_assignment": "역할을 배정하며 소통 중…",
+      "production": "역할별로 작품을 제작 중…",
+      "completed": "자동화 파이프라인이 완료되었습니다."
+    },
+    "role": {
+      "showrunner": "쇼러너",
+      "screenwriter": "작가",
+      "worldbuilder": "세계관 설계",
+      "editor": "편집자",
+      "critic": "비평가",
+      "refiner": "로컬 다듬기"
+    },
+    "rolePending": "배정 대기",
+    "startSession": "길드 세션 시작",
+    "startAutomation": "길드 자동화 시작",
+    "running": "협업 파이프라인 실행 중…",
+    "automationRunning": "길드 자동화 실행 중…",
+    "completed": "길드 작품이 저장되었습니다.",
+    "automationCompleted": "길드 자동화가 완료되어 작품이 저장되었습니다.",
+    "failed": "세션을 완료하지 못했습니다.",
+    "inferenceFailed": "추론 엔드포인트에 연결할 수 없습니다. LiteLLM 프록시 또는 Ollama URL을 확인하세요.",
+    "rosterFailed": "추론 기반 모집·역할 협상이 실패했습니다. 엔드포인트와 협력자 설정을 확인하세요.",
+    "needBothKinds": "공홈 AI와 로컬 LLM을 각각 하나 이상 활성화하세요.",
+    "bus": "길드 버스 (AI 간 대화)",
+    "busEmpty": "자동화를 시작하면 AI들이 여기서 대화합니다.",
+    "roster": "길드원 & 역할",
+    "rosterEmpty": "모집이 끝나면 길드원과 역할이 표시됩니다.",
+    "studioFounded": "설립된 스튜디오",
+    "pipeline": "협업 단계",
+    "artifact": "병합된 작품",
+    "noArtifact": "아직 길드 작품이 없습니다. 자동화를 시작해 보세요.",
+    "endpointPlaceholder": "http://127.0.0.1:11434",
+    "proxyPlaceholder": "http://127.0.0.1:4000",
+    "modelPlaceholder": "모델 이름",
+    "commercialProxy": "LiteLLM 프록시",
+    "commercialProxyHint": "LiteLLM을 로컬에서 실행하고 ChatGPT·Claude·Grok·Gemini 행의 엔드포인트를 이 OpenAI 호환 URL로 맞추세요.",
+    "workPlan": "작품 기획안",
+    "planEmpty": "상용 AI 기획이 끝나면 기획안이 표시됩니다.",
+    "planRoles": "필요 역할",
+    "planReady": "기획안 확정",
+    "activity": "실시간 활동",
+    "guildWork": "길드 작품"
+  }
 }

@@ -9,6 +9,8 @@ const DEFAULTS = {
   subtitleBg: 60,
   subtitlePosition: 'bottom',
   showDialoguePanel: true,
+  localLlmEndpoint: 'http://127.0.0.1:11434',
+  localLlmModel: 'llama3',
 };
 
 export function getSettings() {
